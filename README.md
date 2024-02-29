@@ -50,7 +50,7 @@ This conversion was done by hand from the FORTRAN source files in the above GitH
 
 (7) The original subtracted 1/5 point per move over 250. The new move counting logic makes this harder and less necessary, so it was left out.
 
-(8) I felt sad for the hunchback and gave him a more lasting effect in the game.
+(8) I felt sad for the hunchback and gave them a more lasting effect in the game.
 
 (9) The sword doesn't glow properly in the presence of the wizard. This bug was left in but can be easily fixed. The fix is in the "corrections.grif" file.
 
@@ -69,7 +69,7 @@ To run, put "GRIF.exe" and "Castlequest.grif" into the same directory, then run 
 
 You can save a log of the game using the "-o/--output <filename>" parameter. It will overwrite any existing file.
 
-You can make a text documents of commands to be entered and include it with the "-i/--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" being "true". There are two files in the "Walkthrough" directory with such commands.
+You can make a text documents of commands to be entered and include it with the "-i/--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two files in the "Walkthrough" directory with such lists of commands.
 
 You can make modifications to the game without changing the "Castlequest.grif" file by using the "-m/--mod <filename/directory>" command line parameter. It will load an additional GRIF file or directory of files after the base file is loaded and overwrite any duplicate keys with new values. You can have as many "-m/--mod" parameters as you want. These are great for making tiny modifications to the game such as "value.norandom" or "value.debug", or the "corrections.grif" file. Or localization to another language...
 
@@ -82,6 +82,6 @@ Finally, there is a full map of the game in "Documents/maps.txt". Best to leave 
 
 While writing this conversion, extensive use was made of a compiled version of the original FORTRAN code. Arthur O'Dwyer's directions worked perfectly (after some GFORTRAN issues on my part) and produced a fully functional game. I also made use of his walkthrough text (and made another walkthrough of my own). I used the original game's output and compared to the GRIF output to make sure everything matched, as much as possible.
 
-I would like to thank Michael S. Holtzman and Mark Kershenblatt for writing the original Castlequest! I had played it in college back in the day, and still remember the enjoyment (and frustration) that I had.
+I would like to thank Michael S. Holtzman and Mark Kershenblatt for writing the original Castlequest! I had played it in college back in the day, and still remember the enjoyment (and frustration).
 
-Thanks also go to Arthur O'Dwyer for his part in transcribing the Patent Office's document into readable and runnable code and blogging about it so others would know it existed again. This conversion could not have been done without his work.
+Thanks also go to Arthur O'Dwyer for his part in transcribing the U.S. Copyright Office's document into readable and runnable code and blogging about it so others would know it existed again. This conversion would not have been possible without his work.
