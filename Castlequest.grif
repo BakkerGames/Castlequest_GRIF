@@ -63,12 +63,15 @@
 			@endif
 			@script(@concat(\"room.\",@room,\".afterlook\"))
 			@for(i,1,@get(value.nitems))
-				@if @eq(@get(item.$i.location),@room) @then
+				@if @here($i) @then
 					@set(temp.show,true)
 					@if @isroom(84) @and @true(@get(value.prec)) @then
 						@if @eq($i,9) @or @eq($i,16) @then
 							@set(temp.show,false)
 						@endif
+					@endif
+					@if @isroom(1) @and @eq($i,9) @and @eq(@get(value.rope),2) @then
+						@set(temp.show,false)
 					@endif
 					@if @true(@get(temp.show)) @then
 						@msg(item.$i.longdesc)
@@ -433,16 +436,13 @@
 		@msg(message.1045)",
 	"command.11.*":
 		"@comment(\"take something\")
-		@set(temp.found,false)
 		@if @here(@get(input.noun)) @then
 			@take(@get(input.noun))
 			@comment(\"inv might be full\")
 			@if @carry(@get(input.noun)) @then
-				@set(temp.found,true)
 				@incmoves
 			@endif
-		@endif
-		@if @false(@get(temp.found)) @then
+		@else
 			@msg(message.1003)
 		@endif",
 	"command.12.2":
@@ -1294,7 +1294,7 @@
 		@if @isroom(1) @then
 			@if @eq(@get(value.shuttr),0) @then
 				@msg(message.des.417)
-			@elseif @eq(@get(value.wind1),1) @then
+			@elseif @ge(@get(value.wind1),1) @then
 				@msg(message.1031)
 			@else
 				@msg(message.1008)
