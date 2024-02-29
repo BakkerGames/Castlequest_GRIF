@@ -1,6 +1,6 @@
-# CastleQuest GRIF
+# Castlequest GRIF
 
-Port of CastleQuest to GRIF (Game Runner for Interactive Fiction)
+Port of Castlequest to GRIF (Game Runner for Interactive Fiction)
 
 # Port of Castlequest (1980)
 
