@@ -1,0 +1,335 @@
+// This is the Castlequest "Happy Path" script to get the 300-point ending.
+// It works as is for the IFE version and it works with adjustments for the
+// 1981 Fortran version.
+//
+// In the 1981 version, as long as you watch for random wolf and gnome
+// appearances and handle them (and don't die from them), it will work to
+// complete the game. Save often! The one encounter with the Mirror Maze in
+// the 1981 version requires repeating directions until you exit, however
+// long that takes. In the IFE version, it will only take one move due to
+// modifed logic.
+//
+// This is not guaranteed to be the shortest path. I didn't try to make it
+// that tight, and only used it to verify the files and the IFE program.
+// The number of moves will be different in IFE than in the 1981 version,
+// which counted LOOK as a move and other issues. IFE counts a move each
+// time a command is entered and something actually happens. The lamp fuel
+// has been adjusted in order to line up better with the 1981 version.
+//
+NO // decline instructions
+// Start the game
+OPEN DRAWER // +25 POINTS = 25
+TAKE ALL
+OPEN SHUTTER
+W
+D
+TAKE ALL
+LOAD GUN
+N
+TAKE AXE
+S
+W
+N
+BREAK BOARD
+OPEN DOOR // +15 POINTS = 40
+W
+N
+TAKE BOTTLE
+S
+S
+S
+U
+W
+TAKE PEN
+E
+E
+OPEN BOOK
+TAKE ALL
+W
+D
+DROP PAPER
+DROP PEN
+WAKE BUTLER
+READ NOTE // +5 POINTS = 45
+E
+U
+W
+NW
+TAKE TORCH
+SE
+E
+E
+TAKE ACID
+W
+TAKE BLOOD
+W
+TAKE ROPE
+E
+N
+BREAK MIRROR // +10 POINTS = 55
+D
+W
+D
+DROP TORCH
+W
+TAKE STAKE
+E
+U
+U
+FEED BAT
+N
+E
+TAKE LAMP
+W
+LEFT 31 // 1981 VERSION ALWAYS FAILS FIRST TIME, SO USE BAD VALUE
+LEFT 8
+RIGHT 31
+LEFT 59 // +5 POINTS = 60
+OPEN DOOR
+W
+W
+LIGHT LAMP
+W
+OPEN COFFIN
+THROW STAKE // +25 POINTS = 85, BUFFY MOVE
+E
+E
+EXTINGUISH LAMP
+E
+S
+D
+N
+W
+S // REPEAT THIS UNTIL IN DIM CORRIDOR
+UNLOCK DOOR
+OPEN DOOR
+DROP KEY
+E
+THROW ACID
+TIE ROPE
+THROW ROPE // +10 POINTS = 95
+D // +20 POINTS = 115
+TAKE STATUE
+U
+TAKE ROPE
+W
+D
+S
+DROP STATUE
+DROP ROPE
+DROP CROSS
+SE
+TAKE CIGAR
+N
+S
+TAKE HOOK
+N
+D
+W
+TAKE KEROSENE
+E
+U
+DROP HOOK
+DROP CIGAR
+DROP MATCH
+W
+W
+N
+TAKE WATER
+S
+E
+E
+E
+U
+TAKE KEY
+W
+D
+LIGHT LAMP
+S
+S
+E
+NE
+NE // +10 POINTS = 125
+TAKE CHAMPAGNE
+SW
+SW
+W
+S
+EXTINGUISH FIRE
+W
+S
+W
+W // +10 POINTS = 135
+TAKE FIGURE
+E
+E
+S
+E
+DROP BOTTLE
+W
+N
+E
+E
+NE
+N
+POOF
+EXTINGUISH LAMP
+E
+D
+TAKE STATUE
+TAKE CROSS
+U
+W
+POOF
+LIGHT LAMP
+S
+S
+E
+D
+W
+DROP FIGURE // +10 POINTS = 145
+DROP CHAMPAGNE // +10 POINTS = 155
+DROP STATUE // +10 POINTS = 165
+DROP CROSS // +10 POINTS = 175
+E
+U
+W
+N
+N
+POOF
+EXTINGUISH LAMP
+E
+D
+TAKE ALL
+TIE ROPE
+U
+W
+POOF
+LIGHT LAMP
+S
+W
+W
+N
+NE
+W
+D
+LIGHT MATCH
+LIGHT TORCH
+EXTINGUISH MATCH
+MELT GLACIER
+EXTINGUISH TORCH
+DROP TORCH
+N
+E // +10 POINTS = 185
+TAKE SWAN
+W
+S
+U
+W
+W
+UNLOCK DOOR
+OPEN DOOR
+U
+D
+E
+E
+D
+SW
+S
+W // +10 POINTS = 195
+S
+THROW HOOK
+E
+TAKE SAPPHIRE
+S
+U
+W
+THROW CIGAR
+LIGHT MATCH
+LIGHT CIGAR
+EXTINGUISH MATCH
+S // +10 POINTS = 205
+TAKE SWORD
+N
+W
+N
+N
+WAVE SWORD
+W // +10 POINTS = 215
+TAKE MONEY
+E
+E
+E
+SE
+N
+D
+S
+SW
+E
+NE
+S
+E
+D
+W
+DROP SWORD // +10 POINTS = 225
+DROP SAPPHIRE // +10 POINTS = 235
+DROP MONEY // +10 POINTS = 245
+DROP SWAN // +10 POINTS = 255
+DROP KEY // +9 POINTS = 264
+E
+U
+W
+N
+N
+POOF
+EXTINGUISH LAMP
+E
+D
+W
+W
+N
+TAKE BOAT
+CROSS
+D
+LIGHT LAMP
+E
+E
+D
+E
+N
+SW
+S
+S
+E
+TAKE BOTTLE
+CROSS // +10 POINTS = 274
+DROP BOTTLE // +1 POINTS = 275
+TAKE RUBY
+CROSS
+DROP BOAT
+W
+N
+E
+E
+NE
+S
+E
+D
+W
+DROP RUBY // +10 POINTS = 285
+E
+U
+BREAK DOOR
+N
+WAVE AXE // +3 POINTS = 288
+W
+WAVE AXE // +2 POINTS = 290
+E
+N
+WAVE AXE // +3 POINTS = 295
+S
+E
+WAVE AXE // +2 POINTS = 292
+W
+S
+HONK // +5 POINTS = 300

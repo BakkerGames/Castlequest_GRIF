@@ -1,0 +1,23 @@
+{
+	"message.1014": "\\n  You blew it.  I think you'd better start over.",
+	"message.1064": "\\n  It is now pitch dark.  If you procede you may stumble and fall.",
+	"message.1083": "\\n  Your lamp is getting dim.  Perhaps you\\n  should look for more fuel.",
+	"message.hint.14": "\\n  Try opening the book by Shakespeare.",
+	"message.hint.1003": "\\n  It will cost you five points.\\n  Do you still want the hint?",
+	"room.1.longdesc": "\\n  You are in a large, tarnished brass bed in an old, musty bedroom.\\n  Cobwebs hang from the ceiling.  A few rays of light filter through\\n  the shutters.  There is a nightstand nearby with a single wooden\\n  drawer.  The door west creaks in the breeze.  A macabre portrait\\n  hangs to the left of an empty fireplace.",
+	"room.3.longdesc": "\\n  You are in the parlor, an old fashioned sitting room.  A display\\n  case of dueling pistols hangs over the mantle.  Stairs lead up to\\n  a dimly lit corridor.  Open double doors lead west.  Two wide\\n  hallways lead north and south.",
+	"room.8.longdesc": "\\n  You are in the foyer.  An umbrella near the door is dripping on the\\n  thick pile carpet.  A black cape is draped neatly over the banister\\n  of a grand staircase leading up.  A magnificent archway leads north.\\n  Corridors lead south and southeast, a small hallway heads west,\\n  and a narrow stairway goes down.",
+	"room.14.longdesc": "\\n  You are in a vast room full of laboratory equipment.  Several\\n  experiments appear to be in progress, and the remnants of some\\n  that failed are strewn about the room.  A giant door hewn out of\\n  granite leads south and an entrance leads west into darkness.",
+	"room.25.longdesc": "\\n  You are in a storage room filled with empty cardboard boxes\\n  and some large crates filled with dirt.  The door goes east.",
+	"room.27.longdesc": "\\n  This is the mirror maze.  A myriad of mirrors reflect your\\n  image in a dazzling array of light.  The reflections make it\\n  impossible to discern a direction.",
+	"room.80.longdesc": "\\n  You are in the remains of an old wine cellar, apparently the\\n  victim of a cave in.  Casks of once fine wine lie crushed in\\n  the rubble.  A battered keg of GENESEE sits off in the corner.\\n  The room smells like a Rathskellar band party.  A muddy path\\n  goes east, and steps lead up to a door in the ceiling.",
+	"room.89.longdesc": "\\n  You are in an extremely cold chamber embedded deep\\n  within the glacier.  Stalactites of ice hang from\\n  the ceiling far above you.  An ominous tunnel leaves\\n  to the west.",
+	"room.100.longdesc": "\\n  You feel the elevator jump as you are whisked up towards\\n  ground level.  You emerge in the open air in the village\\n  square amidst cheers from the local villagers.  Banners\\n  proclaiming the death of count Vladimir hang from most\\n  of the old buildings around the square.  The mayor\\n  presents you with a key to the city and makes your\\n  birthday a holiday.  You watch the sun rise as you\\n  bask in your newfound fame.",
+	"room.93.afterlook":
+		"@if @true(@get(value.wiz)) @then
+			@msg(message.1128)
+		@endif
+		@if @carry(12) @and @true(@get(value.wiz)) @then
+			@msg(message.des.411)
+		@endif",
+}
