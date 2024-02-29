@@ -1,20 +1,20 @@
 // This is the Castlequest "Happy Path" script to get the 300-point ending.
-// It works as is for the IFE version and it works with adjustments for the
-// 1981 Fortran version.
+// It works as is for the GRIF version and it works with adjustments for the
+// 1980 Fortran version.
 //
-// In the 1981 version, as long as you watch for random wolf and gnome
+// In the 1980 version, as long as you watch for random wolf and gnome
 // appearances and handle them (and don't die from them), it will work to
-// complete the game. Save often! The one encounter with the Mirror Maze in
-// the 1981 version requires repeating directions until you exit, however
-// long that takes. In the IFE version, it will only take one move due to
-// modifed logic.
+// complete the game. The one encounter with the Mirror Maze in the 1980
+// version requires repeating directions until you exit, however long that
+// takes. In the GRIF version, it will only take one move due to modifed
+// logic.
 //
 // This is not guaranteed to be the shortest path. I didn't try to make it
-// that tight, and only used it to verify the files and the IFE program.
-// The number of moves will be different in IFE than in the 1981 version,
-// which counted LOOK as a move and other issues. IFE counts a move each
+// that tight, and only used it to verify the files and the GRIF program.
+// The number of moves will be different in GRIF than in the 1980 version,
+// which counted LOOK as a move and other issues. GRIF counts a move each
 // time a command is entered and something actually happens. The lamp fuel
-// has been adjusted in order to line up better with the 1981 version.
+// has been adjusted in order to line up better with the 1980 version.
 //
 NO // decline instructions
 // Start the game
@@ -81,7 +81,7 @@ N
 E
 TAKE LAMP
 W
-LEFT 31 // 1981 VERSION ALWAYS FAILS FIRST TIME, SO USE BAD VALUE
+LEFT 31 // 1980 VERSION ALWAYS FAILS FIRST TIME, SO USE BAD VALUE
 LEFT 8
 RIGHT 31
 LEFT 59 // +5 POINTS = 60

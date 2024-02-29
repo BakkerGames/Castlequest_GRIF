@@ -1,6 +1,6 @@
-// Walkthrough for Castlequest IFE
+// Walkthrough for Castlequest GRIF
 // This walkthrough only works with "value.norandom=true" to remove all random events.
-// It works with Castlequest 1981 if random events are handled as they happen.
+// It works with Castlequest 1980 if random events are handled as they happen.
 Y
 Y
 Y

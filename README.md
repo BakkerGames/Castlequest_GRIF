@@ -50,15 +50,17 @@ This conversion was done by hand from the FORTRAN source files in the above GitH
 
 (7) The original subtracted 1/5 point per move over 250. The new move counting logic makes this harder and less necessary, so it was left out.
 
-(8) The sword doesn't glow properly in the presence of the wizard. This bug was left in but can be easily fixed. The fix is in the "corrections.grif" file.
+(8) I felt sad for the hunchback and gave him a more lasting effect in the game.
 
-(9) Several typos and spacing issues were left in. The fixes are in the "corrections.grif" file.
+(9) The sword doesn't glow properly in the presence of the wizard. This bug was left in but can be easily fixed. The fix is in the "corrections.grif" file.
 
-(10) I haven't extensively checked all of the failures and errors which are possible, so some of those may not function as the original.
+(10) Several typos and spacing issues were left in. The fixes are in the "corrections.grif" file.
 
-(11) For debugging and walkthroughs, "value.norandom" was added. If "true", the wolf and gnome never appear, the Mirror Maze is more stable, and the footsteps are never heard. Make sure it is "false" for the full Castlequest experience!
+(11) I haven't extensively checked all of the failures and errors which are possible, so some of those may not function as the original.
 
-(12) Also for debugging, "value.debug" can be set to "true". This was in the original and needed a password. It is not directly changeable while playing in this version but can be turned on with a modification file (see below). There are some extra messages which will be shown, and saving the game doesn't quit.
+(12) For debugging and walkthroughs, "value.norandom" was added. If "true", the wolf and gnome never appear, the Mirror Maze is more stable, and the footsteps are never heard. Make sure it is "false" for the full Castlequest experience!
+
+(13) Also for debugging, "value.debug" can be set to "true". This was in the original and needed a password. It is not directly changeable while playing in this version but can be turned on with a modification file (see below). There are some extra messages which will be shown, and saving the game doesn't quit.
 
 
 ## Running Castlequest
@@ -67,7 +69,7 @@ To run, put "GRIF.exe" and "Castlequest.grif" into the same directory, then run 
 
 You can save a log of the game using the "-o/--output <filename>" parameter. It will overwrite any existing file.
 
-You can make a text documents of commands to be entered and include it with the "-i/--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" being "true".
+You can make a text documents of commands to be entered and include it with the "-i/--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" being "true". There are two files in the "Walkthrough" directory with such commands.
 
 You can make modifications to the game without changing the "Castlequest.grif" file by using the "-m/--mod <filename/directory>" command line parameter. It will load an additional GRIF file or directory of files after the base file is loaded and overwrite any duplicate keys with new values. You can have as many "-m/--mod" parameters as you want. These are great for making tiny modifications to the game such as "value.norandom" or "value.debug", or the "corrections.grif" file. Or localization to another language...
 
