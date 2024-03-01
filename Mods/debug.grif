@@ -1,3 +1,41 @@
 {
+	"room.21.afterlook":
+		"@if @true(@get(value.debug)) @then
+			@write(\"\\n  ### A note on the wall reads:\")
+			@write(\"\\n  ### \\\"L 8 R 31 L 59\\\"\")
+			@nl
+		@endif",
+	"room.57.afterlook":
+		"@if @true(@get(value.debug)) @then
+			@write(\"\\n  ### A note on the wall reads:\")
+			@write(\"\\n  ### \\\"SW to Blue Room.\\\"\")
+			@write(\"\\n  ### \\\"N, SW, U to Four Tunnel Jnct.\\\"\")
+			@write(\"\\n  ### \\\"NE, W, D to Glacier Room.\\\"\")
+			@nl
+		@endif",
+	"room.61.afterlook":
+		"@if @true(@get(value.debug)) @then
+			@write(\"\\n  ### A note on the wall reads:\")
+			@write(\"\\n  ### \\\"S, SW to Blue Room.\\\"\")
+			@write(\"\\n  ### \\\"E, SW, U to Four Tunnel Jnct.\\\"\")
+			@write(\"\\n  ### \\\"W, D to Glacier Room.\\\"\")
+			@nl
+			@endif",
+	"room.62.afterlook":
+		"@if @true(@get(value.debug)) @then
+			@write(\"\\n  ### A note on the wall reads:\")
+			@write(\"\\n  ### \\\"N, SW to Blue Room.\\\"\")
+			@write(\"\\n  ### \\\"NE, U to Four Tunnel Jnct.\\\"\")
+			@write(\"\\n  ### \\\"D to Glacier Room.\\\"\")
+			@nl
+			@endif",
+	"room.63.afterlook":
+		"@if @true(@get(value.debug)) @then
+			@write(\"\\n  ### A note on the wall reads:\")
+			@write(\"\\n  ### \\\"NE, SW to Blue Room.\\\"\")
+			@write(\"\\n  ### \\\"U to to Four Tunnel Jnct.\\\"\")
+			@write(\"\\n  ### \\\"N, D to Glacier Room.\\\"\")
+			@nl
+			@endif",
 	"value.debug": "true",
 }

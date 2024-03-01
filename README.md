@@ -60,7 +60,7 @@ This conversion was done by hand from the FORTRAN source files in the above GitH
 
 (12) For debugging and walkthroughs, "value.norandom" was added. If "true", the wolf and gnome never appear, the Mirror Maze is more stable, and the footsteps are never heard. Make sure it is "false" for the full Castlequest experience!
 
-(13) Also for debugging, "value.debug" can be set to "true". This was in the original and needed a password. It is not directly changeable while playing in this version but can be turned on with a modification file (see below). There are some extra messages which will be shown, and saving the game doesn't quit.
+(13) Also for debugging, "value.debug" can be set to "true". This was in the original and needed a password. It is not directly changeable while playing in this version but can be turned on with a modification file (see below). There are some extra messages which will be shown, and you can save and restore at any time.
 
 
 ## Running Castlequest

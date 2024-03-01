@@ -16,7 +16,9 @@
 // time a command is entered and something actually happens. The lamp fuel
 // has been adjusted in order to line up better with the 1980 version.
 //
-NO // decline instructions
+YES
+YES
+YES
 // Start the game
 OPEN DRAWER // +25 POINTS = 25
 TAKE ALL

@@ -2,7 +2,7 @@
 	"@addscore(x)":
 		"@addto(value.score,$x)
 		@if @true(@get(value.debug)) @then
-			@write(\"\\n  ADD \",$x,\" POINTS, SCORE = \",@get(value.score),\"\\n\")
+			@write(\"\\n  ### ADD \",$x,\" POINTS, SCORE = \",@get(value.score),\"\\n\")
 		@endif",
 	"@carry(x)":
 		"@eq(@get(item.$x.location),@inv)",
@@ -42,7 +42,7 @@
 	"@incmoves":
 		"@addto(value.numove,1)
 		@if @true(@get(value.debug)) @then
-			@write(\"\\n  MOVES = \",@get(value.numove),\"\\n\")
+			@write(\"\\n  ### MOVES = \",@get(value.numove),\"\\n\")
 		@endif",
 	"@inv": "-1",
 	"@isroom(x)":
@@ -50,9 +50,12 @@
 	"@itemloc(x,y)":
 		"@eq(@get(item.$x.location),$y)",
 	"@look":
-		"@if @dark @then
+		"@if @dark @and @false(@get(value.debug)) @then
 			@msg(message.1064)
 		@else
+			@if @true(@get(value.debug)) @then
+				@write(\"\\n  ### ROOM #\",@room,\"\\n\")
+			@endif
 			@script(script.roomimage)
 			@script(@concat(\"room.\",@room,\".beforelook\"))
 			@if @true(@get(@concat(\"room.\",@room,\".visited\"))) @or @eq(@get(value.ibrief),1) @then
@@ -142,7 +145,7 @@
 		@if @eq(@get(value.match),1) @then
 			@addto(value.mmove,1)
 			@if @true(@get(value.debug)) @then
-				@write(\"\\n  MATCH MOVES = \",@get(value.mmove),\"\\n\")
+				@write(\"\\n  ### MATCH MOVES = \",@get(value.mmove),\"\\n\")
 			@endif
 			@if @ge(@get(value.mmove),10) @then
 				@set(value.match,2)
@@ -169,7 +172,7 @@
 		@if @eq(@get(value.lamp),1) @or @eq(@get(value.lamp),2) @then
 			@addto(value.lmove,1)
 			@if @true(@get(value.debug)) @then
-				@write(\"\\n  LAMP MOVES = \",@get(value.lmove),\"\\n\")
+				@write(\"\\n  ### LAMP MOVES = \",@get(value.lmove),\"\\n\")
 			@endif
 			@if @eq(@get(value.lamp),1) @and @ge(@get(value.lmove),@get(value.lampdim)) @then
 				@set(value.lamp,2)
@@ -3938,7 +3941,7 @@
 		@endif
 		@comment(\"CQ1980 subtracts 1/5 point per move over 250. Not included here.\")
 		@if @true(@get(value.debug)) @then
-			@write(\"\\n  ADSCOR = \",@get(temp.adscor),\"\\n\")
+			@write(\"\\n  ### ADSCOR = \",@get(temp.adscor),\"\\n\")
 		@endif",
 	"script.attack_bat":
 		"@set(temp.yorn,@getinchannel)
