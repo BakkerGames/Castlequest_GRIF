@@ -1,0 +1,30 @@
+{
+	"room.21.afterlook":
+		"@write(\"\\n  A note on the wall reads:\")
+		@write(\"\\n  \\\"L 8 R 31 L 59\\\"\")
+		@nl",
+	"room.57.afterlook":
+		"@write(\"\\n  A note on the wall reads:\")
+		@write(\"\\n  \\\"SW to Blue Room.\\\"\")
+		@write(\"\\n  \\\"N, SW, U to Four Tunnel Junction.\\\"\")
+		@write(\"\\n  \\\"NE, W, D to Glacier Room.\\\"\")
+		@nl",
+	"room.61.afterlook":
+		"@write(\"\\n  A note on the wall reads:\")
+		@write(\"\\n  \\\"S, SW to Blue Room.\\\"\")
+		@write(\"\\n  \\\"E, SW, U to Four Tunnel Junction.\\\"\")
+		@write(\"\\n  \\\"W, D to Glacier Room.\\\"\")
+		@nl",
+	"room.62.afterlook":
+		"@write(\"\\n  A note on the wall reads:\")
+		@write(\"\\n  \\\"N, SW to Blue Room.\\\"\")
+		@write(\"\\n  \\\"NE, U to Four Tunnel Junction.\\\"\")
+		@write(\"\\n  \\\"D to Glacier Room.\\\"\")
+		@nl",
+	"room.63.afterlook":
+		"@write(\"\\n  A note on the wall reads:\")
+		@write(\"\\n  \\\"NE, SW to Blue Room.\\\"\")
+		@write(\"\\n  \\\"U to to Four Tunnel Junction.\\\"\")
+		@write(\"\\n  \\\"N, D to Glacier Room.\\\"\")
+		@nl",
+}

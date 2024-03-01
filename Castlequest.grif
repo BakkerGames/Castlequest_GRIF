@@ -55,6 +55,9 @@
 		@else
 			@if @true(@get(value.debug)) @then
 				@write(\"\\n  ### ROOM #\",@room,\"\\n\")
+				@if @dark @then
+					@write(\"\\n  ### DARK\\n\")
+				@endif
 			@endif
 			@script(script.roomimage)
 			@script(@concat(\"room.\",@room,\".beforelook\"))
@@ -1956,108 +1959,71 @@
 	"command.52":
 		"@comment(\"left\")
 		@msg(message.1013)",
-	"command.52.42":
-		"@comment(\"left 8\")
-		@if @isroom(21) @then
-			@if @eq(@get(value.lock),3) @then
-				@msg(message.1147)
-			@elseif @eq(@get(value.lock),0) @then
-				@set(value.lock,1)
-				@incmoves
-				@msg(message.1008)
-			@else
-				@set(value.lock,0)
-				@incmoves
-				@msg(message.1014)
-			@endif
-		@else
-			@msg(message.1013)
-		@endif",
-	"command.52.43":
-		"@comment(\"left 31\")
-		@if @isroom(21) @then
-			@if @eq(@get(value.lock),3) @then
-				@msg(message.1147)
-			@else
-				@set(value.lock,0)
-				@incmoves
-				@msg(message.1014)
-			@endif
-		@else
-			@msg(message.1013)
-		@endif",
-	"command.52.44":
-		"@comment(\"left 59\")
-		@if @isroom(21) @then
-			@if @eq(@get(value.lock),3) @then
-				@msg(message.1147)
-			@elseif @eq(@get(value.lock),2) @then
-				@set(value.lock,3)
-				@addscore(@get(value.lokval))
-				@set(value.locval,0)
-				@set(room.21.door,1)
-				@incmoves
-				@msg(message.1015)
-			@else
-				@set(value.lock,0)
-				@incmoves
-				@msg(message.1014)
-			@endif
-		@else
-			@msg(message.1013)
-		@endif",
 	"command.52.*":
-		"@comment(\"left *\")
+		"@comment(\"left something\")
 		@msg(message.1013)",
+	"command.52.#":
+		"@comment(\"left number\")
+		@if @isroom(21) @then
+			@set(temp.error,true)
+			@if @eq(@get(value.lock),3) @then
+				@msg(message.1147)
+				@set(temp.error,false)
+			@elseif @eq(@get(input.nounword),8) @then
+				@if @eq(@get(value.lock),0) @then
+					@set(value.lock,1)
+					@incmoves
+					@msg(message.1008)
+					@set(temp.error,false)
+				@endif
+			@elseif @eq(@get(input.nounword),59) @then
+				@if @eq(@get(value.lock),2) @then
+					@set(value.lock,3)
+					@addscore(@get(value.lokval))
+					@set(value.locval,0)
+					@set(room.21.door,1)
+					@incmoves
+					@msg(message.1015)
+					@set(temp.error,false)
+				@endif
+			@endif
+			@if @true(@get(temp.error)) @then
+				@set(value.lock,0)
+				@incmoves
+				@msg(message.1014)
+			@endif
+		@else
+			@msg(message.1013)
+		@endif",
 	"command.53":
 		"@comment(\"right\")
 		@msg(message.1013)",
-	"command.53.42":
-		"@comment(\"right 8\")
-		@if @isroom(21) @then
-			@if @eq(@get(value.lock),3) @then
-				@msg(message.1147)
-			@else
-				@set(value.lock,0)
-				@incmoves
-				@msg(message.1014)
-			@endif
-		@else
-			@msg(message.1013)
-		@endif",
-	"command.53.43":
-		"@comment(\"right 31\")
-		@if @isroom(21) @then
-			@if @eq(@get(value.lock),3) @then
-				@msg(message.1147)
-			@elseif @eq(@get(value.lock),1) @then
-				@set(value.lock,2)
-				@incmoves
-				@msg(message.1008)
-			@else
-				@set(value.lock,0)
-				@incmoves
-				@msg(message.1014)
-			@endif
-		@else
-			@msg(message.1013)
-		@endif",
-	"command.53.44":
-		"@comment(\"right 59\")
-		@if @isroom(21) @then
-			@if @eq(@get(value.lock),3) @then
-				@msg(message.1147)
-			@else
-				@set(value.lock,0)
-				@incmoves
-				@msg(message.1014)
-			@endif
-		@else
-			@msg(message.1013)
-		@endif",
 	"command.53.*":
-		"@comment(\"right *\")
+		"@comment(\"right something\")
 		@msg(message.1013)",
+	"command.53.#":
+		"@comment(\"right number\")
+		@if @isroom(21) @then
+			@set(temp.error,true)
+			@if @eq(@get(value.lock),3) @then
+				@msg(message.1147)
+				@set(temp.error,false)
+			@elseif @eq(@get(input.nounword),31) @then
+				@if @eq(@get(value.lock),1) @then
+					@set(value.lock,2)
+					@incmoves
+					@msg(message.1008)
+					@set(temp.error,false)
+				@endif
+			@endif
+			@if @true(@get(temp.error)) @then
+				@set(value.lock,0)
+				@incmoves
+				@msg(message.1014)
+			@endif
+		@else
+			@msg(message.1013)
+		@endif",
 	"command.54":
 		"@comment(\"shoot -> shoot gun\")
 		@script(command.54.20)",
@@ -2265,20 +2231,12 @@
 	"command.57":
 		"@comment(\"save\")
 		@setoutchannel(\"#SAVE;\")
-		@if @true(@get(value.debug)) @then
-			@setoutchannel(\"@msg(message.1008)\")
-		@else
-			@setoutchannel(\"@script(script.score)\")
-			@setoutchannel(\"@quit\")
-		@endif",
+		@setoutchannel(\"@msg(message.1008)\")",
 	"command.58":
 		"@comment(\"restore\")
-		@if @eq(@get(value.numove),0) @or @true(@get(value.debug)) @then
-			@setoutchannel(\"#RESTORE;\")
-			@setoutchannel(\"@look\")
-		@else
-			@msg(message.restore.3005)
-		@endif",
+		@setoutchannel(\"#RESTORE;\")
+		@setoutchannel(\"@msg(message.1008)\")
+		@setoutchannel(\"@look\")",
 	"command.60":
 		"@comment(\"verbose\")
 		@set(value.ibrief,0)
@@ -2850,9 +2808,6 @@
 	"noun.39": "COUN,MAST,VAMP,VLAD",
 	"noun.40": "CASK,COFF",
 	"noun.41": "TUNN",
-	"noun.42": "8",
-	"noun.43": "31",
-	"noun.44": "59",
 	"noun.45": "ROOM",
 	"noun.46": "BOOK",
 	"noun.47": "DOOR",
@@ -4207,7 +4162,7 @@
 			@msg(message.1006)
 		@endif",
 	"script.movenextroom":
-		"@if @dark @then
+		"@if @dark @and @false(@get(value.debug)) @then
 			@msg(message.1077)
 			@dead
 		@elseif @isscript(@get(temp.nextroom)) @then
