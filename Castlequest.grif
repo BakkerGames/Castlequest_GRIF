@@ -4076,7 +4076,6 @@
 		@else
 			@msg(message.7006)
 		@endif
-		@nl
 		@quit",
 	"script.ggnome":
 		"@if @false(@get(value.norandom)) @then
