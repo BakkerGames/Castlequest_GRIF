@@ -1,7 +1,7 @@
 {
 	"message.1014": "\\n  You blew it.  I think you'd better start over.",
 	"message.1064": "\\n  It is now pitch dark.  If you procede you may stumble and fall.",
-	"message.1083": "\\n  Your lamp is getting dim.  Perhaps you\\n  should look for more fuel.",
+	"message.1083": "\\n  Your lamp is getting dim.  Perhaps you should look for more fuel.",
 	"message.hint.14": "\\n  Try opening the book by Shakespeare.",
 	"message.hint.1003": "\\n  It will cost you five points.\\n  Do you still want the hint?",
 	"room.1.longdesc": "\\n  You are in a large, tarnished brass bed in an old, musty bedroom.\\n  Cobwebs hang from the ceiling.  A few rays of light filter through\\n  the shutters.  There is a nightstand nearby with a single wooden\\n  drawer.  The door west creaks in the breeze.  A macabre portrait\\n  hangs to the left of an empty fireplace.",
@@ -13,11 +13,4 @@
 	"room.80.longdesc": "\\n  You are in the remains of an old wine cellar, apparently the\\n  victim of a cave in.  Casks of once fine wine lie crushed in\\n  the rubble.  A battered keg of GENESEE sits off in the corner.\\n  The room smells like a Rathskellar band party.  A muddy path\\n  goes east, and steps lead up to a door in the ceiling.",
 	"room.89.longdesc": "\\n  You are in an extremely cold chamber embedded deep\\n  within the glacier.  Stalactites of ice hang from\\n  the ceiling far above you.  An ominous tunnel leaves\\n  to the west.",
 	"room.100.longdesc": "\\n  You feel the elevator jump as you are whisked up towards\\n  ground level.  You emerge in the open air in the village\\n  square amidst cheers from the local villagers.  Banners\\n  proclaiming the death of count Vladimir hang from most\\n  of the old buildings around the square.  The mayor\\n  presents you with a key to the city and makes your\\n  birthday a holiday.  You watch the sun rise as you\\n  bask in your newfound fame.",
-	"room.93.afterlook":
-		"@if @true(@get(value.wiz)) @then
-			@msg(message.1128)
-		@endif
-		@if @carry(12) @and @true(@get(value.wiz)) @then
-			@msg(message.des.411)
-		@endif",
 }

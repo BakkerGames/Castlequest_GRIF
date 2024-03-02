@@ -274,6 +274,17 @@
 		"@comment(\"down\")
 		@set(temp.nextroom,@get(@concat(\"room.\",@room,\".exit.d\")))
 		@script(script.movenextroom)",
+	"command.11.*":
+		"@comment(\"take something\")
+		@if @here(@get(input.noun)) @then
+			@take(@get(input.noun))
+			@comment(\"inv might be full\")
+			@if @carry(@get(input.noun)) @then
+				@incmoves
+			@endif
+		@else
+			@msg(message.1003)
+		@endif",
 	"command.11.5":
 		"@comment(\"take blood\")
 		@if @carry(18) @then
@@ -440,16 +451,13 @@
 	"command.11.52":
 		"@comment(\"take note\")
 		@msg(message.1045)",
-	"command.11.*":
-		"@comment(\"take something\")
-		@if @here(@get(input.noun)) @then
-			@take(@get(input.noun))
-			@comment(\"inv might be full\")
-			@if @carry(@get(input.noun)) @then
-				@incmoves
-			@endif
+	"command.12.*":
+		"@comment(\"drop something\")
+		@if @carry(@get(input.noun)) @then
+			@drop(@get(input.noun))
+			@msg(message.1008)
 		@else
-			@msg(message.1003)
+			@msg(message.1004)
 		@endif",
 	"command.12.2":
 		"@comment(\"drop bullet\")
@@ -554,14 +562,6 @@
 		@endfor
 		@if @gt(@get(temp.count),0) @then
 			@incmoves
-			@msg(message.1008)
-		@else
-			@msg(message.1004)
-		@endif",
-	"command.12.*":
-		"@comment(\"drop something\")
-		@if @carry(@get(input.noun)) @then
-			@drop(@get(input.noun))
 			@msg(message.1008)
 		@else
 			@msg(message.1004)
@@ -680,6 +680,9 @@
 		@else
 			@write(\"\\n  \",@upper(@get(input.verbword)),\" what?\\n\")
 		@endif",
+	"command.17.*":
+		"@comment(\"throw something -> drop something\")
+		@script(command.12.*)",
 	"command.17.3":
 		"@comment(\"throw axe\")
 		@if @carry(3) @and @lt(@room,95) @then
@@ -821,9 +824,6 @@
 		@else
 			@msg(message.1004)
 		@endif",
-	"command.17.*":
-		"@comment(\"throw something -> drop something\")
-		@script(command.12.*)",
 	"command.18":
 		"@comment(\"load -> load gun\")
 		@script(command.18.20)",
@@ -1071,6 +1071,9 @@
 		@else
 			@msg(message.1003)
 		@endif",
+	"command.23.*":
+		"@comment(\"eat something\")
+		@msg(message.1016)",
 	"command.23.22":
 		"@comment(\"eat food\")
 		@if @herecarry(22) @then
@@ -1080,8 +1083,8 @@
 		@else
 			@msg(message.1004)
 		@endif",
-	"command.23.*":
-		"@comment(\"eat something\")
+	"command.24.*":
+		"@comment(\"drink something\")
 		@msg(message.1016)",
 	"command.24.5":
 		"@comment(\"drink blood\")
@@ -1120,9 +1123,6 @@
 		@else
 			@msg(message.1003)
 		@endif",
-	"command.24.*":
-		"@comment(\"drink something\")
-		@msg(message.1016)",
 	"command.25":
 		"@comment(\"jump\")
 		@if @isroom(1) @then
@@ -1184,6 +1184,9 @@
 		@else
 			@msg(message.1013)
 		@endif",
+	"command.27.*":
+		"@comment(\"open *\")
+		@msg(message.1013)",
 	"command.27.33":
 		"@comment(\"open lock\")
 		@if @isroom(21) @then
@@ -1292,8 +1295,8 @@
 		@else
 			@msg(message.1003)
 		@endif",
-	"command.27.*":
-		"@comment(\"open *\")
+	"command.28.*":
+		"@comment(\"close *\")
 		@msg(message.1013)",
 	"command.28.37":
 		"@comment(\"close window\")
@@ -1370,9 +1373,6 @@
 		@else
 			@msg(message.1003)
 		@endif",
-	"command.28.*":
-		"@comment(\"close *\")
-		@msg(message.1013)",
 	"command.29":
 		"@comment(\"lock\")
 		@if @le(@room,25) @then
@@ -1591,6 +1591,9 @@
 	"command.36":
 		"@comment(\"score\")
 		@script(script.score)",
+	"command.37.*":
+		"@comment(\"break something\")
+		@msg(message.1084)",
 	"command.37.37":
 		"@comment(\"break window\")
 		@if @isroom(1) @then
@@ -1658,9 +1661,6 @@
 		@else
 			@msg(message.1003)
 		@endif",
-	"command.37.*":
-		"@comment(\"break something\")
-		@msg(message.1084)",
 	"command.38":
 		"@comment(\"water -> pour\")
 		@script(command.39)",
@@ -1669,6 +1669,9 @@
 		@script(@concat(\"command.39.\",@get(input.noun)))",
 	"command.39":
 		"@comment(\"pour\")
+		@msg(message.1005)",
+	"command.39.*":
+		"@comment(\"pour something\")
 		@msg(message.1005)",
 	"command.39.1":
 		"@comment(\"pour kerosene -> fill lamp\")
@@ -1695,9 +1698,6 @@
 	"command.39.26":
 		"@comment(\"pour water -> drop water\")
 		@script(command.12.26)",
-	"command.39.*":
-		"@comment(\"pour something\")
-		@msg(message.1005)",
 	"command.40":
 		"@comment(\"back\")
 		@if @gt(@get(value.lroom),0) @then
@@ -1714,6 +1714,8 @@
 		@else
 			@msg(message.1013)
 		@endif",
+	"command.42.*":
+		"@msg(message.1016)",
 	"command.42.79":
 		"@comment(\"melt ice\")
 		@if @isroom(65) @then
@@ -1736,8 +1738,6 @@
 		@else
 			@msg(message.1003)
 		@endif",
-	"command.42.*":
-		"@msg(message.1016)",
 	"command.43":
 		"@comment(\"cross\")
 		@if @carry(14) @then
@@ -1914,6 +1914,9 @@
 		@else
 			@msg(message.1003)
 		@endif",
+	"command.49.*":
+		"@comment(\"fill something\")
+		@msg(message.1002)",
 	"command.49.18":
 		"@comment(\"fill bottle\")
 		@if @carry(18) @then
@@ -1944,18 +1947,15 @@
 		@else
 			@msg(message.1005)
 		@endif",
-	"command.49.*":
-		"@comment(\"fill something\")
-		@msg(message.1002)",
 	"command.50":
 		"@comment(\"hint (room)\")
-		@script(script.want_room_hint)",
-	"command.50.45":
-		"@comment(\"hint room\")
 		@script(script.want_room_hint)",
 	"command.50.*":
 		"@comment(\"hint something\")
 		@script(script.want_item_hint)",
+	"command.50.45":
+		"@comment(\"hint room\")
+		@script(script.want_room_hint)",
 	"command.52":
 		"@comment(\"left\")
 		@msg(message.1013)",
@@ -2027,6 +2027,9 @@
 	"command.54":
 		"@comment(\"shoot -> shoot gun\")
 		@script(command.54.20)",
+	"command.54.*":
+		"@comment(\"shoot something\")
+		@msg(message.1057)",
 	"command.54.8":
 		"@comment(\"shoot hunchback\")
 		@if @herecarry(8) @then
@@ -2175,9 +2178,6 @@
 		@else
 			@msg(message.1003)
 		@endif",
-	"command.54.*":
-		"@comment(\"shoot something\")
-		@msg(message.1057)",
 	"command.55.39":
 		"@comment(\"wake count\")
 		@if @isroom(43) @then
@@ -2521,7 +2521,7 @@
 	"item.80.hint":
 		"@comment(\"wizard\")
 		@set(temp.hint,@get(message.hint.28))",
-	"message.1001": " Welcome to CASTLEQUEST!! Would you like instructions?",
+	"message.1001": "  Welcome to CASTLEQUEST!! Would you like instructions?",
 	"message.1002": "\\n  That would be a neat trick.",
 	"message.1003": "\\n  I don't see that here.",
 	"message.1004": "\\n  You don't have it with you.",
@@ -3764,6 +3764,9 @@
 	"room.93.afterlook":
 		"@if @true(@get(value.wiz)) @then
 			@msg(message.1128)
+		@endif
+		@if @carry(12) @and @true(@get(value.wiz)) @then
+			@msg(message.des.411)
 		@endif",
 	"room.93.door": "-1",
 	"room.93.exit.e": "91",
@@ -4274,11 +4277,11 @@
 	"system.after_prompt": "",
 	"system.dont_understand": "\\n  I don't understand \"{0}\".",
 	"system.dont_understand_that": "\\n  I don't understand that.",
-	"system.filename_blank": "\\n  Please specify a filename.",
+	"system.do_what_with": "\\n  Do what with the \"{0}\"?",
 	"system.gamename": "Castlequest",
+	"system.intro": "  Castlequest (C) 1980\\n\\n  By Michael S. Holtzman and Mark Kershenblatt.\\n\\n  Port to GRIF by Scott Bakker (C) 2024\\n\\n",
 	"system.output_width": "-1",
 	"system.prompt": "\\n",
-	"system.do_what_with": "\\n  Do what with the \"{0}\"?",
 	"system.wordsize": "4",
 	"value.bat": "true",
 	"value.bat.comment": "STATUS OF BAT (0=GONE,1=BLOCKING WAY,HUNGRY)",
