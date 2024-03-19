@@ -4167,10 +4167,10 @@
 		"@if @dark @and @false(@get(value.debug)) @then
 			@msg(message.1077)
 			@dead
-		@elseif @isscript(@get(temp.nextroom)) @then
-			@script(temp.nextroom)
-		@elseif @isnull(@get(temp.nextroom)) @or @eq(@get(temp.nextroom),0) @then
+		@elseif @isnulldata(temp.nextroom) @or @eq(@get(temp.nextroom),0) @then
 			@msg(message.1006)
+		@elseif @isscriptdata(temp.nextroom) @then
+			@script(temp.nextroom)
 		@else
 			@goto(@get(temp.nextroom))
 		@endif",
