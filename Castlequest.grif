@@ -89,6 +89,9 @@
 				@endif
 			@endfor
 		@endif",
+	"@lookfull":
+		"@set(@concat(\"room.\",@room,\".visited\"),false)
+		@look"
 	"@quit":
 		"@setoutchannel(\"#GAMEOVER;\")",
 	"@room":
@@ -1586,8 +1589,7 @@
 		@endif",
 	"command.35":
 		"@comment(\"look\")
-		@set(@concat(\"room.\",@room,\".visited\"),false)
-		@look",
+		@lookfull",
 	"command.36":
 		"@comment(\"score\")
 		@script(script.score)",
@@ -2236,7 +2238,7 @@
 		"@comment(\"restore\")
 		@setoutchannel(\"#RESTORE;\")
 		@setoutchannel(\"@msg(message.1008)\")
-		@setoutchannel(\"@look\")",
+		@setoutchannel(\"@lookfull\")",
 	"command.60":
 		"@comment(\"verbose\")
 		@set(value.ibrief,0)

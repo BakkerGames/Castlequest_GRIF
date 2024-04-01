@@ -1,6 +1,6 @@
 // This is the Castlequest "Happy Path" script to get the 300-point ending.
-// It works as is for the GRIF version and it works with adjustments for the
-// 1980 Fortran version.
+// It works as is for the GRIF version when "value.norandom" is "true", and
+// it works with adjustments for the 1980 Fortran version.
 //
 // In the 1980 version, as long as you watch for random wolf and gnome
 // appearances and handle them (and don't die from them), it will work to
@@ -9,12 +9,12 @@
 // takes. In the GRIF version, it will only take one move due to modifed
 // logic.
 //
-// This is not guaranteed to be the shortest path. I didn't try to make it
-// that tight, and only used it to verify the files and the GRIF program.
-// The number of moves will be different in GRIF than in the 1980 version,
-// which counted LOOK as a move and other issues. GRIF counts a move each
-// time a command is entered and something actually happens. The lamp fuel
-// has been adjusted in order to line up better with the 1980 version.
+// This is not guaranteed to be the shortest path. It is only used it to
+// verify the files and the GRIF program. The number of moves will be
+// different in GRIF than in the 1980 version, which counted LOOK as a move
+// and other issues. GRIF counts a move each time a command is entered and
+// something actually happens. The lamp fuel has been adjusted in order to
+// line up better with the 1980 version.
 //
 YES
 YES
