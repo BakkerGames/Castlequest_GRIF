@@ -30,7 +30,7 @@ on this repository or send him an email.)
 
 ## GRIF Port
 
-GRIF, or Game Runner for Interactive Fiction, is an application designed to run game data files. It uses the DAGS scripting engine and the GROD data dictionary for accessing text data. It also uses GRIFDataIO to load and save data files in GRIF format. All are available as source in GitHub. GROD and DAGS are available as separate NuGet packages.
+GRIF, or Game Runner for Interactive Fiction, is a program designed to run game data files. It uses the DAGS scripting engine and the GROD data dictionary for accessing text data. It also uses GRIFData to load and save data files in GRIF format. All are available as source in GitHub. GROD and DAGS are available as separate NuGet packages.
 
 All of the text, values, and scripts necessary to play the game are stored in JSON-formatted text files (one or more). GRIF handles input and output and the parsing of commands but leaves the rest up to the game data.
 
@@ -67,21 +67,19 @@ This port was done by hand from the FORTRAN source files in the above Castleques
 
 ## Running Castlequest
 
-To run, put "GRIF.exe" and "Castlequest.grif" into the same directory, then run "GRIF.exe Castlequest.grif" or even just "GRIF". GRIF.exe runs in Windows 64-bit and needs .NET 8 or above installed. The source can probably be compiled to run in other environments.
+To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif" or even just "grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source.
 
 You can save an output log of the game using the "-o/--output <filename>" parameter. It will overwrite any existing file.
 
 You can make a text document of commands to be entered and include it with the "-i/--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two such files in the "Walkthrough" directory.
 
-You can make modifications to the game without changing the "Castlequest.grif" file by using the "-m/--mod <filename/directory>" command line parameter. It will load an additional GRIF file or directory of files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "-m/--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples. There one called "room_maps.grif" which adds an ASCII map of the room's exits at the beginning of the "@look" command. Another great use would be to translate all text into other languages.
-
-Finally, there is a full map of the game in "Documents/maps.txt". Best to leave that until after playing, though.
+You can make modifications to the game without changing the "Castlequest.grif" file by using the "-m/--mod <filename/directory>" command line parameter. It will load an additional GRIF file or directory of files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "-m/--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples.
 
 
 ## Acknowledgements
 
-While writing this port, extensive use was made of a compiled version of the original FORTRAN code. Arthur O'Dwyer's directions worked perfectly (after some GFORTRAN issues on my part) and produced a fully functional game. I also made use of his walkthrough text (and made another HappyPath walkthrough of my own). I used the original game's output and compared to the GRIF output to make sure everything matched, as much as possible.
-
 I would like to thank Michael S. Holtzman and Mark Kershenblatt for writing the original Castlequest! I had played it in college back in the day, and still remember the enjoyment (and frustration).
 
 Thanks also go to Arthur O'Dwyer for his part in transcribing the U.S. Copyright Office's document into readable and runnable code and blogging about it so others would know it existed again. This port would not have been possible without his work.
+
+While writing this port, extensive use was made of a compiled version of the original FORTRAN code. Arthur O'Dwyer's directions worked perfectly and produced a fully functional game on Windows. I also made use of his walkthrough text (and made another HappyPath walkthrough of my own). I used the original game's output and compared to the GRIF output to make sure everything matched, as much as possible.
