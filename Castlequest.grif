@@ -91,7 +91,7 @@
 		@endif",
 	"@lookfull":
 		"@set(@concat(\"room.\",@room,\".visited\"),false)
-		@look"
+		@look",
 	"@quit":
 		"@setoutchannel(\"#GAMEOVER;\")",
 	"@room":
@@ -226,7 +226,7 @@
 	"background.10":
 		"@comment(\"footsteps\")
 		@if @false(@get(value.norandom)) @then
-			@if @lt(@rnd(1000),8) @then
+			@if @ne(@room,1) @and @lt(@rnd(1000),8) @then
 				@msg(message.1145)
 			@endif
 		@endif",
@@ -3910,7 +3910,7 @@
 		@elseif @true(@get(temp.yorn)) @then
 			@msg(message.des.416)
 		@else
-			@msg(message.ok)
+			@msg(message.1008)
 		@endif",
 	"script.attack_butler":
 		"@set(temp.yorn,@getinchannel)
@@ -3919,7 +3919,7 @@
 		@elseif @true(@get(temp.yorn)) @then
 			@msg(message.des.415)
 		@else
-			@msg(message.ok)
+			@msg(message.1008)
 		@endif",
 	"script.attack_hunchback":
 		"@sendto(8,0)
@@ -3931,7 +3931,7 @@
 		@elseif @true(@get(temp.yorn)) @then
 			@msg(message.1086)
 		@else
-			@msg(message.ok)
+			@msg(message.1008)
 		@endif",
 	"script.attack_wolf":
 		"@set(temp.yorn,@getinchannel)
@@ -3940,7 +3940,7 @@
 		@elseif @true(@get(temp.yorn)) @then
 			@msg(message.des.414)
 		@else
-			@msg(message.ok)
+			@msg(message.1008)
 		@endif",
 	"script.break_board_hand":
 		"@set(temp.yorn,@getinchannel)
@@ -3949,7 +3949,7 @@
 		@elseif @true(@get(temp.yorn)) @then
 			@msg(message.1040)
 		@else
-			@msg(message.ok)
+			@msg(message.1008)
 		@endif",
 	"script.check_butler_note":
 		"@if @eq(@get(value.but),1) @then
@@ -4136,8 +4136,17 @@
 			@script(script.introdone)
 		@endif",
 	"script.intro3":
-		"@msg(message.hint.33)
-		@script(script.introdone)",
+		"@set(temp.yorn,@getinchannel)
+		@if @not @isbool(@get(temp.yorn)) @then
+			@msg(message.yorn.2001)
+			@setoutchannel(\"#ASK;\")
+			@setoutchannel(\"@script(script.intro3)\")
+		@elseif @true(@get(temp.yorn)) @then
+			@msg(message.hint.33)
+			@script(script.introdone)
+		@else
+			@script(script.introdone)
+		@endif",
 	"script.introdone":
 		"@look
 		@comment(\"CQ1980 doesn't set visited at start\")
@@ -4248,7 +4257,7 @@
 			@write(@get(temp.hint))
 			@nl
 		@else
-			@msg(message.ok)
+			@msg(message.1008)
 		@endif",
 	"script.wwolf":
 		"@if @false(@get(value.norandom)) @then
