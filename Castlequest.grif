@@ -600,6 +600,13 @@
 		@else
 			@msg(message.des.418)
 		@endif",
+	"command.15.*":
+		"@comment(\"attack something\")
+		@if @isnulldata(@concat(\"command.15.\",@get(input.noun))) @then
+			@msg(message.1002)
+		@else
+			@script(@concat(\"command.15.\",@get(input.noun)))
+		@endif",
 	"command.15.8":
 		"@comment(\"attack hunchback\")
 		@if @herecarry(8) @then
@@ -670,12 +677,6 @@
 		@else
 			@msg(message.1003)
 		@endif",
-	"command.16":
-		"@comment(\"kill -> attack\")
-		@script(command.15)",
-	"command.16.*":
-		"@comment(\"kill something -> attack something\")
-		@script(@concat(\"command.15.\",@get(input.noun)))",
 	"command.17":
 		"@comment(\"throw\")
 		@if @carry(3) @then
@@ -4413,8 +4414,7 @@
 	"verb.12": "DROP",
 	"verb.13": "ENTE,IN",
 	"verb.14": "EXIT,LEAV,OUT",
-	"verb.15": "ATTA",
-	"verb.16": "KILL",
+	"verb.15": "ATTA,KILL",
 	"verb.17": "THRO",
 	"verb.18": "LOAD",
 	"verb.19": "FUCK",
