@@ -848,9 +848,11 @@
 			@msg(message.1003)
 		@endif",
 	"command.19":
-		"@msg(message.1047)",
+		"@comment(\"swear\")
+		@msg(message.1047)",
 	"command.19.*":
-		"@msg(message.1079)",
+		"@comment(\"swear something\")
+		@msg(message.1079)",
 	"command.20.3":
 		"@comment(\"wave axe\")
 		@if @carry(3) @then
@@ -929,6 +931,7 @@
 				@set(value.master,4)
 				@sendto(6,0)
 				@addscore(25)
+				@comment(\"mirror maze exits\")
 				@for(i,1,10)
 					@set(wher.$i,2)
 				@endfor
@@ -1300,7 +1303,7 @@
 			@msg(message.1003)
 		@endif",
 	"command.28.*":
-		"@comment(\"close *\")
+		"@comment(\"close something\")
 		@msg(message.1013)",
 	"command.28.37":
 		"@comment(\"close window\")
@@ -1718,7 +1721,8 @@
 			@msg(message.1013)
 		@endif",
 	"command.42.*":
-		"@msg(message.1016)",
+		"@comment(\"melt something\")
+		@msg(message.1016)",
 	"command.42.79":
 		"@comment(\"melt ice\")
 		@if @isroom(65) @then
