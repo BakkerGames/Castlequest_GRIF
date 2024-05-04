@@ -46,28 +46,26 @@ This port was done by hand from the FORTRAN source files in the above Castleques
 
 (5) The logic for the castle being closed and having to enter a secret word to prove you are a baron was not included. Play whenever you want.
 
-(6) It now takes only one move to leave the Mirror Maze after the Count is gone, instead of some random number of attempts.
+(6) The original subtracted 1/5 point per move over 250. This was left out. Take as long as you want to finish, lamp permitting.
 
-(7) The original has some issues with tracking which rooms have been visited, so it showed long descriptions unnecessarily. This was fixed, including the Bedroom.
+(7) It now takes only one move to leave the Mirror Maze after the Count is gone, instead of some random number of attempts.
 
-(8) The original subtracted 1/5 point per move over 250. The new move logic makes this harder and less necessary, so it was left out.
+(8) The original has some issues with tracking which rooms have been visited, so it showed long descriptions unnecessarily. This was fixed, including the Bedroom.
 
-(9) I felt sad for the hunchback and gave them a more lasting effect in the game.
+(9) The sword now glows properly in the presence of the wizard.
 
-(10) The sword now glows properly in the presence of the wizard.
+(10) I felt sad for the hunchback and gave them a more lasting effect in the game.
 
 (11) Several typos and spacing issues were left in. The fixes are in the "Mods\corrections.grif" file.
 
-(12) I haven't extensively checked all of the failures and errors which are possible, so some of those may not function exactly as the original.
+(12) For debugging and walkthroughs, "value.norandom" was added. If "true", the wolf and gnome never appear, the Mirror Maze is more stable, and the footsteps are never heard. Make sure it is "false" or undefined for the full Castlequest experience!
 
-(13) For debugging and walkthroughs, "value.norandom" was added. If "true", the wolf and gnome never appear, the Mirror Maze is more stable, and the footsteps are never heard. Make sure it is "false" for the full Castlequest experience!
-
-(14) For debugging, "value.debug" can be set to "true". This was a command in the original and needed a password. It is not directly changeable while playing in this port but can be turned on with a modification file (see below). It displays some extra messages, disables darkness, and does a few other things.
+(13) For debugging, "value.debug" can be set to "true". This was a command in the original and needed a password. It is not directly changeable while playing in this port but can be turned on with a modification file (see below). It displays some extra messages, disables darkness, and does a few other things.
 
 
 ## Running Castlequest
 
-To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif" or even just "grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) and [GRIF_Binaries](https://github.com/BakkerGames/GRIF_Binaries) for info and binaries.
+To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) and [GRIF_Binaries](https://github.com/BakkerGames/GRIF_Binaries) for info and binaries.
 
 You can save an output log of the game using the "-o/--output <filename>" parameter. It will overwrite any existing file.
 
