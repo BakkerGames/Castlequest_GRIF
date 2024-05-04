@@ -43,7 +43,9 @@
 		"@addto(value.numove,1)
 		@if @true(@get(value.debug)) @then
 			@write(\"\\n  ### MOVES = \",@get(value.numove),\"\\n\")
-		@endif",
+		@endif
+		@script(script.lamp_moves)
+		@script(script.match_moves)",
 	"@inv": "-1",
 	"@isroom(x)":
 		"@eq(@room,$x)",
@@ -144,57 +146,6 @@
 					@msg(message.1089)
 				@endif
 				@set(value.sun,1)
-			@endif
-		@endif",
-	"background.5":
-		"@comment(\"match moves\")
-		@if @eq(@get(value.match),1) @then
-			@addto(value.mmove,1)
-			@if @true(@get(value.debug)) @then
-				@write(\"\\n  ### MATCH MOVES = \",@get(value.mmove),\"\\n\")
-			@endif
-			@if @ge(@get(value.mmove),10) @then
-				@set(value.match,2)
-				@sendto(15,0)
-				@msg(message.1088)
-				@if @dark @then
-					@msg(message.1064)
-				@endif
-				@comment(\"these require the match\")
-				@if @false(@get(value.hole)) @then
-					@if @gt(@get(item.12.findvalue),0) @then
-						@subto(value.max,@get(item.12.treasurevalue))
-					@endif
-				@endif
-				@if @false(@get(value.melt)) @then
-					@if @gt(@get(item.30),0) @then
-						@subto(value.max,@get(item.30.treasurevalue))
-					@endif
-				@endif
-			@endif
-		@endif",
-	"background.6":
-		"@comment(\"lamp moves\")
-		@if @eq(@get(value.lamp),1) @or @eq(@get(value.lamp),2) @then
-			@addto(value.lmove,1)
-			@if @true(@get(value.debug)) @then
-				@write(\"\\n  ### LAMP MOVES = \",@get(value.lmove),\"\\n\")
-			@endif
-			@if @eq(@get(value.lamp),1) @and @ge(@get(value.lmove),@get(value.lampdim)) @then
-				@set(value.lamp,2)
-				@msg(message.1083)
-				@if @carry(1) @and @carry(21) @then
-					@msg(message.1085)
-					@sendto(1,0)
-					@set(value.lmove,0)
-					@set(value.lamp,1)
-				@endif
-			@elseif @eq(@get(value.lamp),2) @and @ge(@get(value.lmove),@get(value.lampout)) @then
-				@set(value.lamp,3)
-				@msg(message.1009)
-				@if @dark @then
-					@msg(message.1064)
-				@endif
 			@endif
 		@endif",
 	"background.7":
@@ -458,6 +409,7 @@
 		"@comment(\"drop something\")
 		@if @carry(@get(input.noun)) @then
 			@drop(@get(input.noun))
+			@incmoves
 			@msg(message.1008)
 		@else
 			@msg(message.1004)
@@ -820,9 +772,11 @@
 		@if @carry(27) @then
 			@if @isroom(86) @and @false(@get(value.hole)) @then
 				@sendto(27,-3)
+				@incmoves
 				@msg(message.1119)
 			@else
 				@drop(27)
+				@incmoves
 				@msg(message.1008)
 			@endif
 		@else
@@ -856,6 +810,7 @@
 	"command.20.3":
 		"@comment(\"wave axe\")
 		@if @carry(3) @then
+			@incmoves
 			@if @isroom(95) @and @false(@get(value.mas1)) @then
 				@set(value.mas1,true)
 				@addscore(3)
@@ -1006,6 +961,7 @@
 		"@comment(\"stab wizard\")
 		@if @carry(12) @then
 			@if @isroom(93) @and @true(@get(value.wiz)) @then
+				@incmoves
 				@msg(message.1133)
 				@dead
 			@else
@@ -1291,10 +1247,10 @@
 		"@comment(\"open drawer\")
 		@if @isroom(1) @then
 			@if @itemloc(19,0) @then
-				@incmoves
 				@set(item.19.location,@room)
 				@addscore(@get(item.19.findvalue))
 				@set(item.19.findvalue,0)
+				@incmoves
 				@msg(message.1024)
 			@else
 				@msg(message.1008)
@@ -1509,6 +1465,7 @@
 					@msg(message.1002)
 				@endif
 			@elseif @carry(27) @then
+				@incmoves
 				@msg(message.died.7004)
 				@dead
 			@else
@@ -1736,6 +1693,7 @@
 						@msg(item.26.longdesc)
 					@endif
 				@else
+					@incmoves
 					@msg(message.1144)
 					@dead
 				@endif
@@ -4156,6 +4114,30 @@
 		"@look
 		@comment(\"CQ1980 doesn't set visited at start\")
 		@set(room.1.visited,true)",
+	"script.lamp_moves":
+		"@comment(\"lamp moves\")
+		@if @eq(@get(value.lamp),1) @or @eq(@get(value.lamp),2) @then
+			@addto(value.lmove,1)
+			@if @true(@get(value.debug)) @then
+				@write(\"\\n  ### LAMP MOVES = \",@get(value.lmove),\"\\n\")
+			@endif
+			@if @eq(@get(value.lamp),1) @and @ge(@get(value.lmove),@get(value.lampdim)) @then
+				@set(value.lamp,2)
+				@msg(message.1083)
+				@if @carry(1) @and @carry(21) @then
+					@msg(message.1085)
+					@sendto(1,0)
+					@set(value.lmove,0)
+					@set(value.lamp,1)
+				@endif
+			@elseif @eq(@get(value.lamp),2) @and @ge(@get(value.lmove),@get(value.lampout)) @then
+				@set(value.lamp,3)
+				@msg(message.1009)
+				@if @dark @then
+					@msg(message.1064)
+				@endif
+			@endif
+		@endif",
 	"script.lost_acid":
 		"@comment(\"these require the acid\")
 		@if @gt(@get(item.17.findvalue),0) @then
@@ -4178,6 +4160,33 @@
 			@goto(95)
 		@else
 			@msg(message.1006)
+		@endif",
+	"script.match_moves":
+		"@comment(\"match moves\")
+		@if @eq(@get(value.match),1) @then
+			@addto(value.mmove,1)
+			@if @true(@get(value.debug)) @then
+				@write(\"\\n  ### MATCH MOVES = \",@get(value.mmove),\"\\n\")
+			@endif
+			@if @ge(@get(value.mmove),10) @then
+				@set(value.match,2)
+				@sendto(15,0)
+				@msg(message.1088)
+				@if @dark @then
+					@msg(message.1064)
+				@endif
+				@comment(\"these require the match\")
+				@if @false(@get(value.hole)) @then
+					@if @gt(@get(item.12.findvalue),0) @then
+						@subto(value.max,@get(item.12.treasurevalue))
+					@endif
+				@endif
+				@if @false(@get(value.melt)) @then
+					@if @gt(@get(item.30),0) @then
+						@subto(value.max,@get(item.30.treasurevalue))
+					@endif
+				@endif
+			@endif
 		@endif",
 	"script.movenextroom":
 		"@if @dark @and @false(@get(value.debug)) @then
@@ -4300,7 +4309,7 @@
 	"system.prompt": "\\n",
 	"system.wordsize": "4",
 	"value.bat": "true",
-	"value.bat.comment": "STATUS OF BAT (0=GONE,1=BLOCKING WAY,HUNGRY)",
+	"value.bat.comment": "BAT IN ATTIC?",
 	"value.blood": "false",
 	"value.blood.comment": "BLOOD IN BOTTLE?",
 	"value.bottle": "false",
