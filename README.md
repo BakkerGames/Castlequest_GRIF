@@ -30,11 +30,11 @@ on this repository or send him an email.)
 
 ## GRIF Port
 
-GRIF, or Game Runner for Interactive Fiction, is a program designed to run game data files. It uses the DAGS scripting engine and the GROD data dictionary for accessing text data. It also uses GRIFData to load and save data files in GRIF format. All are available as source in GitHub. GROD and DAGS are available as separate NuGet packages.
+GRIF, or Game Runner for Interactive Fiction, is a program designed to run game data files. It uses the DAGS scripting engine and the GROD data dictionary for accessing text data. It also uses GRIFData to load and save data files in GRIF format. The source is available in GitHub at [GRIF](https://github.com/BakkerGames/GRIF). Binary executables are available in the [Releases](https://github.com/BakkerGames/GRIF/releases) section there, or at [GRIF_Binaries](https://github.com/BakkerGames/GRIF_Binaries).
 
 All of the text, values, and scripts necessary to play the game are stored in JSON-formatted text files (one or more). GRIF handles input and output and the parsing of commands but leaves the rest up to the game data.
 
-This port was done by hand from the FORTRAN source files in the above Castlequest GitHub repository. It is a faithful representation of the original with some minor exceptions:
+This port was done by hand from the FORTRAN source files in the [Castlequest](https://github.com/Quuxplusone/Castlequest) GitHub repository. It is a faithful representation of the original with some minor exceptions:
 
 (1) GRIF ignores case in the typed commands. The original only allowed uppercase.
 
@@ -56,7 +56,7 @@ This port was done by hand from the FORTRAN source files in the above Castleques
 
 (10) I felt sad for the hunchback and gave them a more lasting effect in the game.
 
-(11) Several typos and spacing issues were left in. The fixes are in the "Mods\corrections.grif" file.
+(11) Any typos and spacing issues from the original were left in. The fixes are in the "Mods\corrections.grif" file.
 
 (12) For debugging and walkthroughs, "value.norandom" was added. If "true", the wolf and gnome never appear, the Mirror Maze is more stable, and the footsteps are never heard. Make sure it is "false" or undefined for the full Castlequest experience!
 
@@ -67,11 +67,11 @@ This port was done by hand from the FORTRAN source files in the above Castleques
 
 To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) and [GRIF_Binaries](https://github.com/BakkerGames/GRIF_Binaries) for info and binaries.
 
-You can save an output log of the game using the "-o/--output <filename>" parameter. It will overwrite any existing file.
+You can save an output log of the game using the "-o|--output <filename>" parameter. It will overwrite any existing file.
 
-You can make a text document of commands to be entered and include it with the "-i/--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two such files in the "Walkthrough" directory.
+You can make a text document of commands to be entered and include it with the "-i|--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two such files in the "Walkthrough" directory.
 
-You can make modifications to the game without changing the "Castlequest.grif" file by using the "-m/--mod <filename/directory>" command line parameter. It will load an additional GRIF file or directory of files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "-m/--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples.
+You can make modifications to the game without changing the "Castlequest.grif" file by using the "-m|--mod <filename/directory>" command line parameter. It will load an additional GRIF file or directory of files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "-m|--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples.
 
 
 ## Acknowledgements
