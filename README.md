@@ -22,10 +22,7 @@ in the form of two PDFs. Arthur rotated and concatenated the PDFs
 into the single 78-page PDF in this repository, `castlequest.pdf`.
 
 Arthur O'Dwyer manually transcribed the PDF into the plain text
-file in this repository, `castlequest.ocr.txt`. (If you find any
-places where the transcription differs from the original PDF,
-Arthur will pay a "bug bounty" of $5 per error! Open a pull request
-on this repository or send him an email.)
+file in this repository, `castlequest.ocr.txt`.
 
 
 ## GRIF Port
