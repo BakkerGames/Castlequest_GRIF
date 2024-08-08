@@ -1,25 +1,26 @@
-{
-	"value.debug": "true",
-	"verb.51": "goto",
-	"verb.90": "list",
-	"command.51":
-		"@write(\"\\n  Enter a room number also.\\n\")",
-	"command.51.#":
-		"@if @ge(@get(input.nounword),1) @and @le(@get(input.nounnumber),100) @then
-			@set(value.room,@get(input.nounword))
-			@write(\"\\n  You spin around and around and around...\\n\")
-			@look
-		@else
-			@write(\"\\n  Invalid room number!\\n\")
-		@endif",
-	"command.90":
-		"@for(i,1,@get(value.nitems))
-			@write(\"\\n  ### ITEM \")
-			@write(@substring(\"$i  \",0,2))
-			@write(\" - Location: \")
-			@write(@substring(@concat(@get(item.$i.location),\"   \"),0,3))
-			@write(\" - \")
-			@write(@get(item.$i.shortdesc))
-		@endfor
-		@nl",
-}
+command.51
+	@write("\n  Enter a room number also.\n")
+command.51.#
+	@if @ge(@get(input.nounword),1) @and @le(@get(input.nounnumber),100) @then
+		@set(value.room,@get(input.nounword))
+		@write("\n  You spin around and around and around...\n")
+		@look
+	@else
+		@write("\n  Invalid room number!\n")
+	@endif
+command.90
+	@for(i,1,@get(value.nitems))
+		@write("\n  ### ITEM ")
+		@write(@substring("$i  ",0,2))
+		@write(" - Location: ")
+		@write(@substring(@concat(@get(item.$i.location),"   "),0,3))
+		@write(" - ")
+		@write(@get(item.$i.shortdesc))
+	@endfor
+	@nl
+value.debug
+	true
+verb.51
+	goto
+verb.90
+	list

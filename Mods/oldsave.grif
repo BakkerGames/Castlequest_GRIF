@@ -1,15 +1,13 @@
-{
-	"command.57":
-		"@comment(\"save\")
-		@setoutchannel(\"#SAVE;\")
-		@setoutchannel(\"@script(script.score)\")
-		@setoutchannel(\"@quit\")",
-	"command.58":
-		"@comment(\"restore\")
-		@if @eq(@get(value.numove),0) @then
-			@setoutchannel(\"#RESTORE;\")
-			@setoutchannel(\"@look\")
-		@else
-			@msg(message.restore.3005)
-		@endif",
-}
+command.57
+	@comment("save")
+	@setoutchannel("#SAVE;")
+	@setoutchannel("@script(script.score)")
+	@setoutchannel("@quit")
+command.58
+	@comment("restore")
+	@if @eq(@get(value.numove),0) @then
+		@setoutchannel("#RESTORE;")
+		@setoutchannel("@look")
+	@else
+		@msg(message.restore.3005)
+	@endif
