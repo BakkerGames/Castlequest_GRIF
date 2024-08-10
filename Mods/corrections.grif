@@ -10,6 +10,8 @@ message.hint.33
 	\n  To aid you in your travels, you may ask for a hint by\n  saying "HELP object", where "object" is the item that you\n  need help with (e.g. "HELP CROSS").  Saying "HELP ROOM"\n  will give you some help concerning the room you're in.
 message.hint.1003
 	\n  It will cost you five points.\n  Do you still want the hint?
+modmsg.corrections
+	\n  The "corrections" mod is installed. Message and description typos have been corrected.
 room.1.longdesc
 	\n  You are in a large, tarnished brass bed in an old, musty bedroom.\n  Cobwebs hang from the ceiling.  A few rays of light filter through\n  the shutters.  There is a nightstand nearby with a single wooden\n  drawer.  The door west creaks in the breeze.  A macabre portrait\n  hangs to the left of an empty fireplace.
 room.3.longdesc

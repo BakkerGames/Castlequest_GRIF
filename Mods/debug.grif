@@ -18,6 +18,8 @@ command.90
 		@write(@get(item.$i.shortdesc))
 	@endfor
 	@nl
+modmsg.debug
+	\n  The "debug" mod is installed. Extra debugging information will be displayed. GOTO and LIST commands added.
 value.debug
 	true
 verb.51

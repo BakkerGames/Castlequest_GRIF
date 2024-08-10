@@ -1,2 +1,4 @@
+modmsg.norandom
+	\n  The "norandom" mod is installed. All random events are removed.
 value.norandom
 	true

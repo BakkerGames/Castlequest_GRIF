@@ -1,3 +1,5 @@
+modmsg.notes
+	\n  The "notes" mod is installed. Notes will appear certain locations to show helpful information.
 room.21.afterlook
 	@write("\n  A note on the wall reads:")
 	@write("\n  \"L 8 R 31 L 59\"")

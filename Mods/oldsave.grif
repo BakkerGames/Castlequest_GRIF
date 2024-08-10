@@ -11,3 +11,5 @@ command.58
 	@else
 		@msg(message.restore.3005)
 	@endif
+modmsg.oldsave
+	\n  The "oldsave" mod is installed. Saving the game will immediately quit and restoring can only be done as the first move.

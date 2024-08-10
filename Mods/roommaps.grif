@@ -1,3 +1,5 @@
+modmsg.maps
+	\n  The "roommaps" mod is installed. Room images will show current exits.
 room.1.roommap
 	@roommap.1.0
 	@roommap.2.0

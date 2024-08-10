@@ -6,7 +6,7 @@
 @carry(x)
 	@eq(@get(item.$x.location),@inv)
 @dark
-	@commit("is it dark here?")
+	@comment("is it dark here?")
 	@if @le(@room,40) @or @ge(@room,95) @then
 		@write("false")
 	@elseif @herecarry(21) @and @ge(@get(value.lamp),1) @and @le(@get(value.lamp),2) @then
@@ -95,6 +95,10 @@
 @lookfull
 	@set(@concat("room.",@room,".visited"),false)
 	@look
+@modmessages
+	@foreachkey(i,"modmsg.")
+		@msg(modmsg.$i)
+	@endforeachkey
 @quit
 	@setoutchannel("#GAMEOVER;")
 @room
@@ -5161,6 +5165,7 @@ script.intro3
 		@script(script.introdone)
 	@endif
 script.introdone
+	@modmessages
 	@look
 	@comment("CQ1980 doesn't set visited at start")
 	@set(room.1.visited,true)
