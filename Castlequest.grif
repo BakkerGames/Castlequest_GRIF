@@ -2600,7 +2600,7 @@ item.80.hint
 	@comment("wizard")
 	@set(temp.hint,@get(message.hint.28))
 message.1001
-	  Welcome to CASTLEQUEST!! Would you like instructions?
+	\s Welcome to CASTLEQUEST!! Would you like instructions?
 message.1002
 	\n  That would be a neat trick.
 message.1003
@@ -3080,9 +3080,9 @@ message.hint.1003
 message.hours.1002
 	\n  I'M SORRY, BUT THE CASTLE IS CLOSED RIGHT NOW.\n       CASTLE HOURS ARE :\n   MONDAY THRU FRIDAY-----21:00 TO 09:00\n   SAT. AND SUN.     -----ALL DAY\n  ONLY BARONS MAY PLAY AT THIS TIME.\n  ARE YOU A BARON???
 message.hours.1003
-	  PROVE IT BY ENTERING THE SECRET WORD.
+	\s PROVE IT BY ENTERING THE SECRET WORD.
 message.hours.1005
-	  THAT IS NOT THE SECRET WORD.  BYE BYE.
+	\s THAT IS NOT THE SECRET WORD.  BYE BYE.
 message.restore.3005
 	\n  I can't do that at this point in time.
 message.wolf.1001
@@ -5365,7 +5365,7 @@ system.do_what_with
 system.gamename
 	Castlequest
 system.intro
-	  Castlequest (C) 1980\n\n  By Michael S. Holtzman and Mark Kershenblatt.\n\n  Port to GRIF by Scott Bakker (C) 2024\n\n
+	\s Castlequest (C) 1980\n\n  By Michael S. Holtzman and Mark Kershenblatt.\n\n  Port to GRIF by Scott Bakker (C) 2024\n\n
 system.output_width
 	-1
 system.prompt
