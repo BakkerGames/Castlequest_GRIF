@@ -559,7 +559,7 @@ command.15
 	@endif
 command.15.*
 	@comment("attack something")
-	@if @isnulldata(@concat("command.15.",@get(input.noun))) @then
+	@if @not @exists(@concat("command.15.",@get(input.noun))) @then
 		@msg(message.1002)
 	@else
 		@script(@concat("command.15.",@get(input.noun)))
@@ -5247,9 +5247,9 @@ script.movenextroom
 	@if @dark @and @false(@get(value.debug)) @then
 		@msg(message.1077)
 		@dead
-	@elseif @isnulldata(temp.nextroom) @or @eq(@get(temp.nextroom),0) @then
+	@elseif @not @exists(temp.nextroom) @or @eq(@get(temp.nextroom),0) @then
 		@msg(message.1006)
-	@elseif @isscriptdata(temp.nextroom) @then
+	@elseif @isscript(temp.nextroom) @then
 		@script(temp.nextroom)
 	@else
 		@goto(@get(temp.nextroom))
@@ -5300,7 +5300,7 @@ script.shoot_wolf
 		@msg(message.1003)
 	@endif
 script.want_hint
-	@if @isnull(@get(temp.hint)) @then
+	@if @null(@get(temp.hint)) @then
 		@msg(message.hint.1002)
 	@else
 		@msg(message.hint.1003)
