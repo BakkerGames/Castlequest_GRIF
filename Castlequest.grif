@@ -1,3 +1,4 @@
+// Castlequest.grif - GRIF format
 @addscore(x)
 	@addto(value.score,$x)
 	@if @true(@get(value.debug)) @then
