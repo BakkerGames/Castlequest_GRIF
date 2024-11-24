@@ -2216,6 +2216,40 @@ command.61
 	@comment("brief")
 	@set(value.ibrief,1)
 	@msg(message.1073)
+config.autorunprefix
+	background.
+config.commandprefix
+	command.
+config.directionprefix
+	direction.
+config.itemlongdesc
+	item.{0}.longdesc
+config.itemprefix
+	item.{0}.
+config.itemshortdesc
+	item.{0}.shortdesc
+config.messageprefix
+	message.
+config.nounprefix
+	noun.
+config.prepositionprefix
+	preposition.
+config.roomexitdirection
+	room.{0}.exit.{1}
+config.roomlongdesc
+	room.{0}.longdesc
+config.roomprefix
+	room.{0}.
+config.roomshortdesc
+	room.{0}.shortdesc
+config.scriptprefix
+	script.
+config.systemprefix
+	system.
+config.valueprefix
+	value.
+config.verbprefix
+	verb.
 item.1.hint
 	@comment("kerosene")
 	@set(temp.hint,@get(message.hint.29))
