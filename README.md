@@ -62,7 +62,7 @@ This port was done by hand from the FORTRAN source files in the [Castlequest](ht
 
 ## Running Castlequest
 
-To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) and [GRIF_Binaries](https://github.com/BakkerGames/GRIF_Binaries) for info and binaries.
+To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) for info and the current release with binaries.
 
 You can save an output log of the game using the "-o|--output <filename>" parameter. It will overwrite any existing file.
 
