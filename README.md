@@ -15,12 +15,12 @@ Info below copied from the above GitHub.
 
 > The U.S. Copyright Office has a deposit related to this game:
 [TXu000091366](https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=TXu000091366&Search_Code=REGS&CNT=10&HIST=1)
-
+>
 > On 2021-03-02, Mark Kershenblatt received 78 pages of paper copies
 from the USCTO. He scanned them in and sent the scans to Arthur O'Dwyer,
 in the form of two PDFs. Arthur rotated and concatenated the PDFs
 into the single 78-page PDF in this repository, `castlequest.pdf`.
-
+>
 > Arthur O'Dwyer manually transcribed the PDF into the plain text
 file in this repository, `castlequest.ocr.txt`.
 
