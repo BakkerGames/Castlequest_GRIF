@@ -64,11 +64,11 @@ This port was done by hand from the FORTRAN source files in the [Castlequest](ht
 
 To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) for info and the current release with binaries.
 
-You can save an output log of the game using the "--output &lt;filename&gt;" parameter. It will overwrite any existing file.
+You can save an output log of the game using the "--output &lt;filename&gt;" (or "-o") parameter. It will overwrite any existing file.
 
-You can make a text document of commands to be entered and include it with the "--input &lt;filename&gt;" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two such files in the "Walkthrough" directory.
+You can make a text document of commands to be entered and include it with the "--input &lt;filename&gt;" (or "-i") parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two such files in the "Walkthrough" directory.
 
-You can make modifications to the game without changing the "Castlequest.grif" file by using the "--mod &lt;filename&gt;" or "--mod &lt;directory&gt;" command line parameter. It will load an additional GRIF file or directory of GRIF files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples.
+You can make modifications to the game without changing the "Castlequest.grif" file by using the "--mod &lt;filename&gt;" or "--mod &lt;directory&gt;" (or "-m") command line parameter. It will load an additional GRIF file or directory of GRIF files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples.
 
 
 ## Acknowledgements
