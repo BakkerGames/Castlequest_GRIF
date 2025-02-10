@@ -11,29 +11,29 @@ By Michael S. Holtzman and Mark Kershenblatt.
 
 Port based on code from (https://github.com/Quuxplusone/Castlequest)
 
-Info below copied from above GitHub.
+Info below copied from the above GitHub.
 
-The U.S. Copyright Office has a deposit related to this game:
+> The U.S. Copyright Office has a deposit related to this game:
 [TXu000091366](https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=TXu000091366&Search_Code=REGS&CNT=10&HIST=1)
-
-On 2021-03-02, Mark Kershenblatt received 78 pages of paper copies
+>
+> On 2021-03-02, Mark Kershenblatt received 78 pages of paper copies
 from the USCTO. He scanned them in and sent the scans to Arthur O'Dwyer,
 in the form of two PDFs. Arthur rotated and concatenated the PDFs
 into the single 78-page PDF in this repository, `castlequest.pdf`.
-
-Arthur O'Dwyer manually transcribed the PDF into the plain text
+>
+> Arthur O'Dwyer manually transcribed the PDF into the plain text
 file in this repository, `castlequest.ocr.txt`.
 
 
 ## GRIF Port
 
-GRIF, or Game Runner for Interactive Fiction, is a program designed to run game data files. It uses the DAGS scripting engine and the GROD data dictionary for accessing text data. It also uses GRIFData to load and save data files in GRIF format. The source is available in GitHub at [GRIF](https://github.com/BakkerGames/GRIF). Binary executables are available in the [Releases](https://github.com/BakkerGames/GRIF/releases) section there, or at [GRIF_Binaries](https://github.com/BakkerGames/GRIF_Binaries).
+GRIF, or Game Runner for Interactive Fiction, is a program designed to run game data files. It uses the DAGS scripting engine and the GROD data dictionary for accessing text data, and loads and saves data files in GRIF format. The source is available in GitHub at [GRIF](https://github.com/BakkerGames/GRIF). Binary executables are available in the [Releases](https://github.com/BakkerGames/GRIF/releases) section there.
 
-All of the text, values, and scripts necessary to play the game are stored in JSON-formatted text files (one or more). GRIF handles input and output and the parsing of commands but leaves the rest up to the game data.
+All of the text, values, and scripts necessary to play the game are stored in GRIF-formatted text files (one or more). GRIF handles input and output and the parsing of commands but leaves the rest up to the game data.
 
 This port was done by hand from the FORTRAN source files in the [Castlequest](https://github.com/Quuxplusone/Castlequest) GitHub repository. It is a faithful representation of the original with some minor exceptions:
 
-(1) GRIF ignores case in the typed commands. The original only allowed uppercase.
+(1) GRIF ignores case in the typed commands. The original only allowed uppercase. Only the first four characters of any word are recognized as in the original.
 
 (2) You are allowed to save and restore at any time and saving doesn't quit. Only one save file is supported.
 
@@ -43,7 +43,7 @@ This port was done by hand from the FORTRAN source files in the [Castlequest](ht
 
 (5) The logic for the castle being closed and having to enter a secret word to prove you are a baron was not included. Play whenever you want.
 
-(6) The original subtracted 1/5 point per move over 250. This was left out. Take as long as you want to finish, lamp permitting.
+(6) The original subtracted 1/5 point per move over 250. This was left out. Take as long as you want to finish without worrying about your score, lamp permitting.
 
 (7) It now takes only one move to leave the Mirror Maze after the Count is gone, instead of some random number of attempts.
 
@@ -62,13 +62,13 @@ This port was done by hand from the FORTRAN source files in the [Castlequest](ht
 
 ## Running Castlequest
 
-To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) and [GRIF_Binaries](https://github.com/BakkerGames/GRIF_Binaries) for info and binaries.
+To run, put "grif" or "grif.exe" and "Castlequest.grif" into the same directory, then run "grif Castlequest.grif". GRIF is available as binary executables for Windows and Linux or it can be compiled from the C# .NET 8 source. See [GRIF](https://github.com/BakkerGames/GRIF) for info and the current release with binaries.
 
-You can save an output log of the game using the "-o|--output <filename>" parameter. It will overwrite any existing file.
+You can save an output log of the game using the "--output &lt;filename&gt;" (or "-o") parameter. It will overwrite any existing file.
 
-You can make a text document of commands to be entered and include it with the "-i|--input <filename>" parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two such files in the "Walkthrough" directory.
+You can make a text document of commands to be entered and include it with the "--input &lt;filename&gt;" (or "-i") parameter. It will run all the commands listed, and then switch back to player input. This only really works with "value.norandom" set to "true". There are two such files in the "Walkthrough" directory.
 
-You can make modifications to the game without changing the "Castlequest.grif" file by using the "-m|--mod <filename/directory>" command line parameter. It will load an additional GRIF file or directory of files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "-m|--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples.
+You can make modifications to the game without changing the "Castlequest.grif" file by using the "--mod &lt;filename&gt;" or "--mod &lt;directory&gt;" (or "-m") command line parameter. It will load an additional GRIF file or directory of GRIF files after the base file is loaded. It will overwrite any duplicate keys with new values. You can have as many "--mod" parameters as you want. These are great for making modifications to the game. Look in the "Mods" directory for examples.
 
 
 ## Acknowledgements
