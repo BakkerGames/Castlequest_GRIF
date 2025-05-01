@@ -4,7 +4,7 @@ Port of Castlequest to GRIF (Game Runner for Interactive Fiction) by Scott Bakke
 
 # Port of Castlequest (1980)
 
-By Michael S. Holtzman and Mark Kershenblatt.
+Copyright and written by Michael S. Holtzman and Mark Kershenblatt.
 
 
 ## Provenance
@@ -35,7 +35,7 @@ This port was done by hand from the FORTRAN source files in the [Castlequest](ht
 
 (1) GRIF allows both upper and lower case in typed commands. The original only allowed uppercase. Both only use the first four characters of any word.
 
-(2) In the original saving would quit, and you could only restore at the beginning. In this port, you are allowed to save and restore at any time and saving doesn't quit. The mod file "Mods\oldsave.grif" can be included to return to the old save logic.
+(2) In the original, saving would quit, and you could only restore at the beginning. In this port, you are allowed to save and restore at any time and saving doesn't quit. The mod file "Mods\oldsave.grif" can be included to return to the old save logic.
 
 (3) There were some issues in the original when counting moves. The original logic wasn't duplicated during the port. This port only counts actual actions as a move, but non-actions such as LOOK, INVENTORY, and trying something that fails are free. The amount of lamp light and moves before sunset had to be adjusted to give them approximately the same duration as the original.
 
