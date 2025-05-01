@@ -1,9 +1,7 @@
 // Castlequest.grif - GRIF format
 @addscore(x)
 	@addto(value.score,$x)
-	@if @true(@get(value.debug)) @then
-		@write("\n  ### ADD ",$x," POINTS, SCORE = ",@get(value.score),"\n")
-	@endif
+	@debug(@concat("\n  ### ADD ",$x," POINTS, SCORE = ",@get(value.score)))
 @carry(x)
 	@eq(@get(item.$x.location),@inv)
 @dark
@@ -29,6 +27,7 @@
 	@else
 		@set(value.lroom,@get(value.room))
 	@endif
+	@debug("\n  ### MOVING TO ROOM $x")
 	@set(value.room,$x)
 	@incmoves
 	@look
@@ -42,9 +41,7 @@
 	@endif
 @incmoves
 	@addto(value.numove,1)
-	@if @true(@get(value.debug)) @then
-		@write("\n  ### MOVES = ",@get(value.numove),"\n")
-	@endif
+	@debug(@concat("\n  ### MOVES = ",@get(value.numove)))
 	@script(script.lamp_moves)
 	@script(script.match_moves)
 @inv
@@ -54,14 +51,12 @@
 @itemloc(x,y)
 	@eq(@get(item.$x.location),$y)
 @look
-	@if @dark @and @false(@get(value.debug)) @then
+	@if @dark @and @false(@get(system.debug)) @then
 		@msg(message.1064)
 	@else
-		@if @true(@get(value.debug)) @then
-			@write("\n  ### ROOM #",@room,"\n")
-			@if @dark @then
-				@write("\n  ### DARK\n")
-			@endif
+		@debug(@concat("\n  ### ROOM #",@room))
+		@if @dark @then
+			@debug("\n  ### DARK")
 		@endif
 		@script(script.roomimage)
 		@script(@concat("room.",@room,".beforelook"))
@@ -671,8 +666,23 @@ command.17.3
 		@msg(message.1003)
 	@endif
 command.17.6
-	@comment("throw stake -> stab count")
-	@script(command.21.39)
+	@comment("throw stake")
+	@if @carry(6) @then
+		@if @isroom(43) @then
+			@if @eq(@get(value.master),0) @or @eq(@get(value.master),4) @then
+				@comment("-> drop stake")
+				@script(command.12.*)
+			@else
+				@comment("(buffy move, throwing stake) -> stab count")
+				@script(command.21.39)
+			@endif
+		@else
+			@comment("-> drop stake")
+			@script(command.12.*)
+		@endif
+	@else
+		@msg(message.1004)
+	@endif
 command.17.9
 	@comment("throw rope")
 	@if @isroom(1) @and @eq(@get(value.wind1),3) @then
@@ -4918,9 +4928,7 @@ script.adscor
 		@addto(temp.adscor,@get(item.30.treasurevalue))
 	@endif
 	@comment("CQ1980 subtracts 1/5 point per move over 250. Not included here.")
-	@if @true(@get(value.debug)) @then
-		@write("\n  ### ADSCOR = ",@get(temp.adscor),"\n")
-	@endif
+	@debug(@concat("\n  ### ADSCOR = ",@get(temp.adscor)))
 script.attack_bat
 	@set(temp.yorn,@getinchannel)
 	@if @not @isbool(@get(temp.yorn)) @then
@@ -5175,9 +5183,7 @@ script.lamp_moves
 	@comment("lamp moves")
 	@if @eq(@get(value.lamp),1) @or @eq(@get(value.lamp),2) @then
 		@addto(value.lmove,1)
-		@if @true(@get(value.debug)) @then
-			@write("\n  ### LAMP MOVES = ",@get(value.lmove),"\n")
-		@endif
+		@debug(@concat("\n  ### LAMP MOVES = ",@get(value.lmove)))
 		@if @eq(@get(value.lamp),1) @and @ge(@get(value.lmove),@get(value.lampdim)) @then
 			@set(value.lamp,2)
 			@msg(message.1083)
@@ -5222,9 +5228,7 @@ script.match_moves
 	@comment("match moves")
 	@if @eq(@get(value.match),1) @then
 		@addto(value.mmove,1)
-		@if @true(@get(value.debug)) @then
-			@write("\n  ### MATCH MOVES = ",@get(value.mmove),"\n")
-		@endif
+		@debug(@concat("\n  ### MATCH MOVES = ",@get(value.mmove)))
 		@if @ge(@get(value.mmove),10) @then
 			@set(value.match,2)
 			@sendto(15,0)
@@ -5246,7 +5250,7 @@ script.match_moves
 		@endif
 	@endif
 script.movenextroom
-	@if @dark @and @false(@get(value.debug)) @then
+	@if @dark @and @false(@get(system.debug)) @then
 		@msg(message.1077)
 		@dead
 	@elseif @not @exists(temp.nextroom) @or @eq(@get(temp.nextroom),0) @then
@@ -5394,8 +5398,6 @@ value.butval
 	5
 value.butval.comment
 	POINTS FOR READING FIRST NOTE (ZERO FOR SECOND)
-value.debug
-	false
 value.fire
 	true
 value.fire.comment

@@ -27,25 +27,25 @@ file in this repository, `castlequest.ocr.txt`.
 
 ## GRIF Port
 
-GRIF, or Game Runner for Interactive Fiction, is a program designed to run game data files. It uses the DAGS scripting engine and the GROD data dictionary for accessing text data, and loads and saves data files in GRIF format. The source is available in GitHub at [GRIF](https://github.com/BakkerGames/GRIF). Binary executables are available in the [Releases](https://github.com/BakkerGames/GRIF/releases) section there.
+GRIF, or Game Runner for Interactive Fiction, is a program designed to run game data files. The source is available in GitHub at [GRIF](https://github.com/BakkerGames/GRIF). Binary executables are available in the [Releases](https://github.com/BakkerGames/GRIF/releases) section.
 
 All of the text, values, and scripts necessary to play the game are stored in GRIF-formatted text files (one or more). GRIF handles input and output and the parsing of commands but leaves the rest up to the game data.
 
 This port was done by hand from the FORTRAN source files in the [Castlequest](https://github.com/Quuxplusone/Castlequest) GitHub repository. It is a faithful representation of the original with some minor exceptions:
 
-(1) GRIF ignores case in the typed commands. The original only allowed uppercase. Only the first four characters of any word are recognized as in the original.
+(1) GRIF allows both upper and lower case in typed commands. The original only allowed uppercase. Both only use the first four characters of any word.
 
-(2) You are allowed to save and restore at any time and saving doesn't quit. Only one save file is supported.
+(2) In the original saving would quit, and you could only restore at the beginning. In this port, you are allowed to save and restore at any time and saving doesn't quit. The mod file "Mods\oldsave.grif" can be included to return to the old save logic.
 
-(3) GRIF counts an entered command as a move when the command succeeds and changes some data. It is specifically handled by calling "@incmoves" at the appropriate time in the game scripts. So LOOK, INVENTORY, SCORE, and trying something which fails are not counted as moves. In the original some of these would be, while some data-changing commands would not. The original logic wasn't duplicated during the port. For this reason the amount of lamp light and moves before sunset had to be adjusted to give them approximately the same duration.
+(3) There were some issues in the original when counting moves. The original logic wasn't duplicated during the port. This port only counts actual actions as a move, but non-actions such as LOOK, INVENTORY, and trying something that fails are free. The amount of lamp light and moves before sunset had to be adjusted to give them approximately the same duration as the original.
 
-(4) The combination lock in the original does not function correctly, due to the LOCK value not being included in `COMMON /BLOCK2/ SAVAR` (probably an oversight). This means it always fails on the first attempt and returns to locked after leaving the room. This was fixed during the port.
+(4) The combination lock in the original did not function correctly, due to the `LOCK` value not being included in `COMMON /BLOCK2/ SAVAR` (probably an oversight). This meant it always failed on the first attempt and returned to locked after leaving the room. This was fixed during the port.
 
 (5) The logic for the castle being closed and having to enter a secret word to prove you are a baron was not included. Play whenever you want.
 
 (6) The original subtracted 1/5 point per move over 250. This was left out. Take as long as you want to finish without worrying about your score, lamp permitting.
 
-(7) It now takes only one move to leave the Mirror Maze after the Count is gone, instead of some random number of attempts.
+(7) It now takes only one move to leave the Mirror Maze later in the game, instead of some random number of attempts.
 
 (8) The original has some issues with tracking which rooms have been visited, so it showed long descriptions unnecessarily. This was fixed, including the Bedroom.
 
@@ -57,7 +57,7 @@ This port was done by hand from the FORTRAN source files in the [Castlequest](ht
 
 (12) For debugging and walkthroughs, "value.norandom" was added. If "true", the wolf and gnome never appear, the Mirror Maze is more stable, and the footsteps are never heard. Make sure it is "false" or undefined for the full Castlequest experience!
 
-(13) For debugging, "value.debug" can be set to "true". This was a command in the original and needed a password. It is not directly changeable while playing in this port but can be turned on with a modification file (see below). It displays some extra messages, disables darkness, and does a few other things.
+(13) For debugging, "system.debug" can be set to "true". This was a command in the original and needed a password. It is not directly changeable while playing in this port but can be turned on with a modification file (see below). It displays some extra messages, disables darkness, and does a few other things.
 
 
 ## Running Castlequest
