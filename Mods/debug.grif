@@ -20,7 +20,7 @@ command.90
 	@nl
 modmsg.debug
 	\n  The "debug" mod is installed. Extra debugging information will be displayed. GOTO and LIST commands added.
-value.debug
+system.debug
 	true
 verb.51
 	goto
