@@ -1,6 +1,7 @@
 // Walkthrough for Castlequest GRIF
 // This walkthrough only works with "value.norandom=true" to remove all random events.
 // It works with Castlequest 1980 if random events are handled as they happen.
+// Written by Arthur O'Dwyer, from https://quuxplusone.github.io/blog/code/2021-03-20-castlequest-walkthru.txt
 Y
 Y
 Y
