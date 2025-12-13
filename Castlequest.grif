@@ -5361,7 +5361,7 @@ script.wwolf
 		@endif
 	@endif
 system.after_prompt
-	
+    null
 system.dont_understand
 	\n  I don't understand "{0}".
 system.dont_understand_that
