@@ -122,15 +122,7 @@
 		@endif
 	@endif
 background.1
-	@comment("show intro")
-	@if @false(@get(value.introdone)) @then
-		@set(value.introdone,true)
-		@msg(message.1001)
-		@nl
-		@writeline("Version ",@get(system.version))
-		@setoutchannel("#ASK;")
-		@setoutchannel("@script(script.intro1)")
-	@endif
+	@script(system.intro)
 background.2
 	@comment("hunchback following")
 	@if @carry(8) @then
@@ -2612,6 +2604,8 @@ item.79.hint
 item.80.hint
 	@comment("wizard")
 	@set(temp.hint,@get(message.hint.28))
+message.1000
+	\s Castlequest (C) 1980\n\n\s By Michael S. Holtzman and Mark Kershenblatt.\n\n\s Port to GRIF by Scott Bakker (C) 2024\n
 message.1001
 	\s Welcome to CASTLEQUEST!! Would you like instructions?
 message.1002
@@ -5373,13 +5367,22 @@ system.do_what_with
 system.gamename
 	Castlequest
 system.intro
-	\s Castlequest (C) 1980\n\n  By Michael S. Holtzman and Mark Kershenblatt.\n\n  Port to GRIF by Scott Bakker (C) 2024\n\n
+	@comment("show intro")
+	@if @false(@get(value.introdone)) @then
+		@set(value.introdone,true)
+		@msg(message.1000)
+		@writeline("  Version ",@get(system.version))
+		@nl
+		@msg(message.1001)
+		@setoutchannel("#ASK;")
+		@setoutchannel("@script(script.intro1)")
+	@endif
 system.output_width
 	-1
 system.prompt
 	\n
 system.version
-    2025.12.20
+	2025.12.20
 system.wordsize
 	4
 value.bat
