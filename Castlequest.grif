@@ -126,6 +126,8 @@ background.1
 	@if @false(@get(value.introdone)) @then
 		@set(value.introdone,true)
 		@msg(message.1001)
+		@nl
+		@writeline("Version ",@get(system.version))
 		@setoutchannel("#ASK;")
 		@setoutchannel("@script(script.intro1)")
 	@endif
@@ -5361,7 +5363,7 @@ script.wwolf
 		@endif
 	@endif
 system.after_prompt
-    null
+	null
 system.dont_understand
 	\n  I don't understand "{0}".
 system.dont_understand_that
@@ -5376,6 +5378,8 @@ system.output_width
 	-1
 system.prompt
 	\n
+system.version
+    2025.12.20
 system.wordsize
 	4
 value.bat
