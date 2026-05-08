@@ -69,16 +69,16 @@
 		@script(@concat("room.",@room,".afterlook"))
 		@for(i,1,@get(value.nitems))
 			@if @here($i) @then
-				@set(temp.show,true)
+				@set(_show,true)
 				@if @isroom(84) @and @true(@get(value.prec)) @then
 					@if @eq($i,9) @or @eq($i,16) @then
-						@set(temp.show,false)
+						@set(_show,false)
 					@endif
 				@endif
 				@if @isroom(1) @and @eq($i,9) @and @eq(@get(value.rope),2) @then
-					@set(temp.show,false)
+					@set(_show,false)
 				@endif
-				@if @true(@get(temp.show)) @then
+				@if @true(@get(_show)) @then
 					@msg(item.$i.longdesc)
 					@if @gt(@get(item.$i.findvalue),0) @then
 						@addscore(@get(item.$i.findvalue))
@@ -2220,6 +2220,26 @@ command.61
 	@comment("brief")
 	@set(value.ibrief,1)
 	@msg(message.1073)
+direction.d
+	down,d
+direction.e
+	east,e
+direction.n
+	north,n
+direction.ne
+	ne
+direction.nw
+	nw
+direction.s
+	""
+direction.se
+	se
+direction.sw
+	sw
+direction.up
+	up,u
+direction.w
+	west,w
 item.1.hint
 	@comment("kerosene")
 	@set(temp.hint,@get(message.hint.29))
@@ -2605,7 +2625,7 @@ item.80.hint
 	@comment("wizard")
 	@set(temp.hint,@get(message.hint.28))
 message.1000
-	\s Castlequest (C) 1980\n\n\s By Michael S. Holtzman and Mark Kershenblatt.\n\n\s Port to GRIF by Scott Bakker (C) 2024\n
+	\s Castlequest (C) 1980\n\n  By Michael S. Holtzman and Mark Kershenblatt.\n\n  Port to GRIF by Scott Bakker (C) 2024\n
 message.1001
 	\s Welcome to CASTLEQUEST!! Would you like instructions?
 message.1002
@@ -5379,10 +5399,12 @@ system.intro
 	@endif
 system.output_width
 	-1
+system.player.location
+	value.room
 system.prompt
 	\n
 system.version
-	2026.01.19
+	2026.05.08
 system.wordsize
 	4
 value.bat
