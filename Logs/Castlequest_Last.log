@@ -1,0 +1,1847 @@
+  Castlequest (C) 1980
+
+  By Michael S. Holtzman and Mark Kershenblatt.
+
+  Port to GRIF by Scott Bakker (C) 2024
+
+  Version 2025.12.20
+
+  Welcome to CASTLEQUEST!! Would you like instructions?
+
+YES
+
+  You are in a remote castle somewhere in Eastern Europe.
+  I will be your eyes and hands.  Direct me with words such
+  as "LOOK", "TAKE", or "DROP".  To move, enter compass points
+  (N,NE,E,SE,S,SW,W,NW), UP, or DOWN.  To get a list of what
+  you are carrying, say "INVENTORY".  To save the current game
+  so it can be finished later say "SAVE".  Say "RESTORE" as
+  your first command to finish a game that had been saved.
+
+  The object of the game is to find the master of the castle
+  and kill him, while accumulating as many treasures as possible.
+  You get maximum points for depositing the treasures in the
+  vault.  Notice that the descriptions of treasures have an
+  exclamation point.  Be wary, as many dangers await you in
+  in the castle.
+
+  Would you like more detailed instructions?
+
+YES
+
+  To supress the long room descriptions, type "BRIEF".  To
+  return to the long room descriptions, use the command "LONG".
+  "SCORE" will give you your present score in the game.  "HELP"
+  will give you a hint about an object in the room, but it will
+  cost you some points.  To end your explorations, say "QUIT".
+  Good luck. (you'll need it).
+
+  Would you like more detailed instructions?
+
+YES
+
+  To aid you in your travels, you may ask for a hint by
+  saying "HELP object", where "object" is the item that you
+  need help with (e.g. "HELP CROSS").  Saying "HELP ROOM"
+  will give you some help concerning the room you're in.
+
+  The "corrections" mod is installed. Message and description typos have been corrected.
+
+  The "norandom" mod is installed. All random events are removed.
+
+  You are in a large, tarnished brass bed in an old, musty bedroom.
+  Cobwebs hang from the ceiling.  A few rays of light filter through
+  the shutters.  There is a nightstand nearby with a single wooden
+  drawer.  The door west creaks in the breeze.  A macabre portrait
+  hangs to the left of an empty fireplace.
+
+  The shutters are closed.
+
+  There is a silver bullet here.
+
+OPEN DRAWER
+
+  There is a silver cross in the drawer!
+
+TAKE ALL
+
+  OK
+
+OPEN SHUTTER
+
+  The shutter is open, but there are bars over the window.
+
+  Something on the ground outside is glistening brightly.
+
+W
+
+  You are in a dim corridor lit by gaslight.  Doors exit
+  to the east and west.  A stairway leads down.
+
+D
+
+  You are in the parlor, an old fashioned sitting room.  A display
+  case of dueling pistols hangs over the mantle.  Stairs lead up to
+  a dimly lit corridor.  Open double doors lead west.  Two wide
+  hallways lead north and south.
+
+  There is some "HORROR HOTEL" writing paper here.
+
+  There is an old gun here.
+
+TAKE ALL
+
+  OK
+
+LOAD GUN
+
+  OK
+
+N
+
+  This is the armor room.  Suits of armor are lined up in
+  rows throughout the room.  Medieval instruments of war
+  are on display along each wall.  The door exits south.
+
+  There is a blood stained hatchet here.
+
+TAKE AXE
+
+  OK
+
+S
+
+  You're in the parlor.
+
+W
+
+  This is the dining room.  A long table is set for 12 guests.
+  A swinging door leads north, and an arched passage leads
+  south.  Open double doors exit to the east.
+
+N
+
+  You are now in the kitchen.  Twelve Swanson's frozen entrees rest
+  on the counter, below a microwave oven.  "THE BEGINNER'S GUIDE TO
+  COOKING" lies on a small table.  A swinging door exits south.
+  Other doors lead east and north.
+
+  Somebody left some tasty food here.
+
+BREAK BOARD
+
+  The door can now be opened.
+
+OPEN DOOR
+
+  The door opens to a brick wall.  ---DEAD END---
+
+  A note on the wall reads "L 8 R 31 L 59".
+
+W
+
+  You are in the kitchen.
+
+  Somebody left some tasty food here.
+
+N
+
+  You are in a small pantry full of various foodstuffs.  To
+  your left is a beautiful china closet filled with dishes
+  pilfered from various restaurants.  On you right is an
+  open drawer full of plastic knives and forks.
+
+  An empty bottle is discarded nearby.
+
+TAKE BOTTLE
+
+  OK
+
+S
+
+  You are in the kitchen.
+
+  Somebody left some tasty food here.
+
+S
+
+  You are in the dining room.
+
+S
+
+  You are in the foyer.  An umbrella near the door is dripping on the
+  thick pile carpet.  A black cape is draped neatly over the banister
+  of a grand staircase leading up.  A magnificent archway leads north.
+  Corridors lead south and southeast, a small hallway heads west,
+  and a narrow stairway goes down.
+
+  The butler is sound asleep.
+
+U
+
+  You are in the upstairs hallway, a long corridor with passages
+  to the north, east, and west.  Stairs lead up and down.
+
+W
+
+  You are in a small boudoir.  The pink walls reflect the
+  soft lighting with a warm glow.  The door exits east.
+
+  There is an old quill pen here.
+
+TAKE PEN
+
+  OK
+
+E
+
+  You're in the upstairs hallway.
+
+E
+
+  This is the library.  All four walls are lined with bookcases.
+  The room is brightly lit, although there is no apparent source
+  of light.
+
+  A copy of Shakespeare's "HAMLET" lies on the desk.
+
+  There are matches from the Vampire Diner here.
+
+OPEN BOOK
+
+  A skeleton key falls out of the book.
+
+TAKE ALL
+
+  OK
+
+W
+
+  You're in the upstairs hallway.
+
+D
+
+  You're in foyer.
+
+  The butler is sound asleep.
+
+DROP PAPER
+
+  OK
+
+DROP PEN
+
+  OK
+
+WAKE BUTLER
+
+  The butler is holding out a note.
+
+READ NOTE
+
+  "Look behind the mirror."
+
+E
+
+  You're in the parlor.
+
+U
+
+  You have fallen through a trap door and find...
+
+  You are in a dark stone E/W passage.
+
+W
+
+  You are at the proverbial fork in the road.  Paths
+  lead east, northwest, and southwest.
+
+NW
+
+  You are in a small room with a high ceiling.  A huge
+  granite slab rests in the middle of the room.  The
+  exits lead SE and NW.
+
+  There is a rusty acetylene torch here.
+
+TAKE TORCH
+
+  OK
+
+SE
+
+  You're at the fork.
+
+E
+
+  You are in a dark E/W passage.
+
+E
+
+  You are in a vast room full of laboratory equipment.  Several
+  experiments appear to be in progress, and the remnants of some
+  that failed are strewn about the room.  A giant door hewn out of
+  granite leads south and an entrance leads west into darkness.
+
+  There is a small flask of nitric acid here.
+
+TAKE ACID
+
+  OK
+
+W
+
+  You are in a dark E/W corridor.  A small but walkable
+  tunnel leads off to the north.
+
+  There is a small pool of blood here.
+
+TAKE BLOOD
+
+  OK
+
+W
+
+  You are in an extremely dark, unfinished room.  The only light
+  emanates from a narrow slit in the ceiling.
+
+  There is a long piece of rope lying on the floor.
+
+TAKE ROPE
+
+  OK
+
+E
+
+  You're in a dark E/W corridor.
+
+N
+
+  You are in a low, dark chamber.  A single mirror
+  is set into the far wall.  The exit goes south.
+
+BREAK MIRROR
+
+  A secret tunnel descends into darkness.
+
+D
+
+  You are in the library.
+
+  A copy of Shakespeare's "HAMLET" lies on the desk.
+
+  A secret tunnel descends into darkness.
+
+W
+
+  You're in the upstairs hallway.
+
+D
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+DROP TORCH
+
+  OK
+
+W
+
+  This is the garden.  Tomato plants are growing neatly in rows.
+  A narrow path goes east and a wider one goes west.
+
+  To one side lies a wooden stake.
+
+TAKE STAKE
+
+  OK
+
+E
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a rusty acetylene torch here.
+
+U
+
+  You're in the upstairs hallway.
+
+U
+
+  You are in a musty room that appears to be an entrance to
+  an attic.  A small passage leads north and stairs descend
+  down behind you.
+
+FEED BAT
+
+  The bat gulps down the blood and flitters away.
+
+N
+
+  You are in an old attic filled with old-fashioned clothes, a pile
+  of newspapers and some antiques.  An entrance to a cedar closet
+  is to the east and there is a door to a crawlspace to the west.
+
+E
+
+  You're in a cedar closet that smells of fresh cedar.  Racks of more
+  old-fashioned clothes lie to your right and left.
+
+  There is a small kerosene lamp here.
+
+TAKE LAMP
+
+  OK
+
+W
+
+  You are in an old attic.
+
+LEFT 31
+
+  You blew it.  I think you'd better start over.
+
+LEFT 8
+
+  OK
+
+RIGHT 31
+
+  OK
+
+LEFT 59
+
+  The lock is now open.
+
+OPEN DOOR
+
+  OK
+
+W
+
+  You are crawling along a low passage that leads east and west.
+
+W
+
+  It is now pitch dark.  If you procede you may stumble and fall.
+
+LIGHT LAMP
+
+  You are in a huge anteroom to an even larger, mysterious
+  chamber.  A chilling wind seems to blow at you from all
+  sides, and a deathlike, vapid black mist surrounds your
+  feet.  Hundreds of sinister looking bats cling to the
+  ceiling and eye you with a spine-tingling anticipatory
+  pleasure.  Two dark, foreboding passages exit to the east
+  and west, and a steep sloping corridor descends NW.
+
+W
+
+  You are in the chamber of the master of the castle,
+  Count Vladimir!  Pictures depicting scenes of tranquil
+  Transylvanian countrysides line the walls.  A huge
+  portrait of Vladimir's brother, Count Dracula, hangs
+  upon the near wall.  In the center of the room is a
+  large, ominous, mahogany coffin.
+
+  The coffin is closed.
+
+OPEN COFFIN
+
+  The Count is asleep in the coffin.
+
+THROW STAKE
+
+  The vampire clutches at the stake and dies,
+  leaving only a pile of dust.
+
+  A note materializes on the wall which reads:
+
+  EMERGENCY EXIT--The mirror maze will lead you
+  to the locked door.  The exit lies within.
+
+E
+
+  You're in a huge anteroom.
+
+E
+
+  You're in a low E/W passage.
+
+EXTINGUISH LAMP
+
+  The light is out.
+
+E
+
+  You are in an old attic.
+
+S
+
+  You are in the attic entrance.
+
+D
+
+  You're in the upstairs hallway.
+
+N
+
+  You are in a narrow "L" shaped corridor, which leads
+  west and south.
+
+W
+
+  This is the mirror maze.  A myriad of mirrors reflect your
+  image in a dazzling array of light.  The reflections make it
+  impossible to discern a direction.
+
+S
+
+  You are in the dim corridor.
+
+UNLOCK DOOR
+
+  OK
+
+OPEN DOOR
+
+  OK
+
+DROP KEY
+
+  OK
+
+E
+
+  You are in the bedroom.
+
+  The window is nailed shut.
+
+  Something on the ground outside is glistening brightly.
+
+THROW ACID
+
+  The acid dissolves the bars.  The window is clear.
+
+TIE ROPE
+
+  The rope is anchored securely to the bed.
+
+THROW ROPE
+
+  The rope is dangling out the window.
+
+D
+
+  You are standing far below a large window.  Rows of
+  tall, exotic flowers form a wall around you.
+
+  A rope hangs from the window.
+
+  A gold statue is glistening in the light!
+
+TAKE STATUE
+
+  OK
+
+U
+
+  You are in the bedroom.
+
+  The window is open.
+
+  A rope hangs from the window.
+
+TAKE ROPE
+
+  OK
+
+W
+
+  You are in the dim corridor.
+
+  There is an ornate skeleton key here!
+
+D
+
+  You're in the parlor.
+
+S
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a rusty acetylene torch here.
+
+DROP STATUE
+
+  OK
+
+DROP ROPE
+
+  OK
+
+DROP CROSS
+
+  OK
+
+SE
+
+  This is the smoking room.  Several cans of tobacco line a shelf
+  above a small bookcase.  A large box of cigars lies on a table.
+  A Honeywell air purifier hums quietly beneath the window.  The
+  only exit is back north, the way you came in.
+
+  The window is nailed shut.
+
+  There is a fine cuban cigar here.
+
+TAKE CIGAR
+
+  OK
+
+N
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a long piece of rope lying on the floor.
+
+  There is a rusty acetylene torch here.
+
+  A gold statue is glistening in the light!
+
+  There is a silver cross nearby!
+
+S
+
+  You are in the workshop.  A myriad of tools clutter the workbench
+  and surrounding tables.  A thick layer of sawdust covers the floor.
+  Footprints in the sawdust indicate that you are not alone.
+
+  There is a heavy steel grappling hook here.
+
+TAKE HOOK
+
+  OK
+
+N
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a long piece of rope lying on the floor.
+
+  There is a rusty acetylene torch here.
+
+  A gold statue is glistening in the light!
+
+  There is a silver cross nearby!
+
+D
+
+  This is the laundry room.  Tattered clothes are scattered about.
+  An old-fashioned washing machine sits rotting in the corner.
+  On a shelf lies a box of Snowy Bleach and some Bounce fabric
+  softener.  The exit leads west and stairs lead up.
+
+W
+
+  You are in a storage room filled with empty cardboard boxes
+  and some large crates filled with dirt.  The door goes east.
+
+  There is a can of kerosene here.
+
+TAKE KEROSENE
+
+  OK
+
+E
+
+  You're in the laundry room.
+
+U
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a long piece of rope lying on the floor.
+
+  There is a rusty acetylene torch here.
+
+  A gold statue is glistening in the light!
+
+  There is a silver cross nearby!
+
+DROP HOOK
+
+  OK
+
+DROP CIGAR
+
+  OK
+
+DROP MATCH
+
+  OK
+
+W
+
+  You are in the garden.
+
+W
+
+  You are at the side of a dirt road that runs north and south.
+  Fresh tracks in the road seem to indicate that a horse-drawn
+  carriage has passed here recently.  A narrow path leads east.
+
+N
+
+  You are at the bank of a wide moat which surrounds the
+  castle.  A small town can be seen far in the distance.
+  The road goes south.
+
+  Off to the side is an old rowboat.
+
+TAKE WATER
+
+  OK
+
+S
+
+  You are at the side of the dirt road.
+
+E
+
+  You are in the garden.
+
+E
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a long piece of rope lying on the floor.
+
+  There is a rusty acetylene torch here.
+
+  There are matches from the Vampire Diner here.
+
+  There is a heavy steel grappling hook here.
+
+  A gold statue is glistening in the light!
+
+  There is a silver cross nearby!
+
+  There is a fine cuban cigar here.
+
+E
+
+  You're in the parlor.
+
+U
+
+  You are in the dim corridor.
+
+  There is an ornate skeleton key here!
+
+TAKE KEY
+
+  OK
+
+W
+
+  A cool wind blows up a stone stairway which descends
+  down into a large stone room.  A note written in blood
+  reads "VERY CLEVER OF YOU TO MAKE IT THIS FAR".
+  The door leads east, back to the hall.
+
+D
+
+  It is now pitch dark.  If you procede you may stumble and fall.
+
+LIGHT LAMP
+
+  You are in a perfectly square room carved out of solid
+  rock.  Stone steps lead up.  An arched passage exits
+  south.  Above the arch is carved the message:
+
+       "ABANDON HOPE ALL YE WHO ENTER HERE".
+
+S
+
+  You are in a long sloping N/S passage.  The darkness
+  seems to thicken around you as you walk.
+
+S
+
+  You are in a narrow room which extends out of sight
+  to the east.  Sloping paths exit north and south.
+  It is getting warmer here.
+
+E
+
+  The path narrows here and continues NE under a
+  carefully constructed heart-shaped arch.  A
+  wider path leads west.  It is very quiet here.
+
+NE
+
+  You are in a twisty tunnel that goes NE and SW.  It
+  seems to be cooler here.
+
+NE
+
+  This is the honeymoon suite.  The entire room is
+  finished in red.  In the center of the room lies a
+  heart shaped bed.  To one side is a heart shaped
+  bath.  A large mirror is mounted on the ceiling above
+  the bed.  The only exit is back the way you came.
+
+  There is a bottle of vintage champagne here!
+
+TAKE CHAMPAGNE
+
+  OK
+
+SW
+
+  You are in a twisty tunnel.
+
+SW
+
+  You are at the heart shaped arch.
+
+W
+
+  You're in narrow room.
+
+S
+
+  This is the fire room.  The stone walls are gutted
+  from centuries of evil fires.  It is very hot here.
+  A low trail leads west and a smaller one leads NE.
+  A sloping trail goes north.
+
+  A wall of fire bars the way to the NE.
+
+EXTINGUISH FIRE
+
+  The fire smoulders and goes out.
+
+W
+
+  You are in the blue room.  The entire room is a deep
+  shade of royal blue.  Exits go north, south and east.
+
+S
+
+  You are in a narrow E/W passage.  A faint noise of
+  rushing water can be heard.  A small crawl goes south.
+
+W
+
+  You are outside a small room.  The path goes back
+  east, from whence you came.
+
+W
+
+  You are inside a small, low room with strange engravings
+  carved in all four walls.  Embedded in the rocky floor
+  is a large compass made of marble and mother-of-pearl.
+
+  Perched on the ground is a valuable jade figure!
+
+TAKE FIGURE
+
+  OK
+
+E
+
+  You are outside a small room.
+
+E
+
+  You are in narrow E/W passage.
+
+S
+
+  You are in a long bending tunnel which leads north
+  and east.  The walls are damp here, and you can
+  distinctly hear the sound of rushing water.
+
+E
+
+  You are at the base of a magnificent underground waterfall.
+  A cool mist rising off the surface of the water almost obscures
+  a small island.  A tunnel goes west and stone steps lead up.
+
+DROP BOTTLE
+
+  OK
+
+W
+
+  You are in the long damp tunnel.
+
+N
+
+  You are in narrow E/W passage.
+
+E
+
+  This is the blue room.
+
+E
+
+  You are in the fire room.
+
+NE
+
+  You're in a huge cavernous room carved out of a strange
+  glowing rock.  Small drops of water drip from various
+  limestone stalactites on the ceiling high above you.
+  A narrowing path heads west.  Another passage goes
+  north.  A large door with an awning goes south.
+
+N
+
+  This room has absolutely nothing in it.  Your footsteps
+  echo hollowly as you walk the length of the room.  On
+  the bare floor is scrawled the word "POOF".
+
+POOF
+
+  You are in a small boudoir.  The pink walls reflect the
+  soft lighting with a warm glow.  The door exits east.
+
+EXTINGUISH LAMP
+
+  The light is out.
+
+E
+
+  You're in the upstairs hallway.
+
+D
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a long piece of rope lying on the floor.
+
+  There is a rusty acetylene torch here.
+
+  There are matches from the Vampire Diner here.
+
+  There is a heavy steel grappling hook here.
+
+  A gold statue is glistening in the light!
+
+  There is a silver cross nearby!
+
+  There is a fine cuban cigar here.
+
+TAKE STATUE
+
+  OK
+
+TAKE CROSS
+
+  OK
+
+U
+
+  You're in the upstairs hallway.
+
+W
+
+  You're in the boudoir.
+
+POOF
+
+  It is now pitch dark.  If you procede you may stumble and fall.
+
+LIGHT LAMP
+
+  You are in the empty room.
+
+S
+
+  You're in glowing rock room.
+
+S
+
+  This is the main lobby.  A gaudy crystal chandelier hangs
+  from the center of a tastelessly finished room.  The decor
+  seems to be from the depression, although junk like this
+  is timeless.  A passageway leads north and down.  To the
+  east is an open elevator.
+
+E
+
+  You are inside an elevator.  The light panel indicates that
+  you are on the upper of two levels.  The "THIS CAR NEXT"
+  sign is lit.
+
+D
+
+  You are inside an elevator.  The light panel indicates that
+  you are on the lower of two levels.  The "THIS CAR NEXT"
+  sign is lit.
+
+W
+
+  This is the safe deposit vault, an immense room with polished
+  steel walls.  A closed circuit T.V. camera hums quietly above
+  you as it pans back and forth across the room.  To the east is
+  an open elevator.  Engraved on the far wall is the message:
+          "DEPOSIT TREASURES HERE FOR FULL CREDIT"
+
+DROP FIGURE
+
+  OK
+
+DROP CHAMPAGNE
+
+  OK
+
+DROP STATUE
+
+  OK
+
+DROP CROSS
+
+  OK
+
+E
+
+  You're in elevator on bottom floor.
+
+U
+
+  You're in elevator on top floor.
+
+W
+
+  This is the lobby.
+
+N
+
+  You're in glowing rock room.
+
+N
+
+  You are in the empty room.
+
+POOF
+
+  You are in a small boudoir.  The pink walls reflect the
+  soft lighting with a warm glow.  The door exits east.
+
+EXTINGUISH LAMP
+
+  The light is out.
+
+E
+
+  You're in the upstairs hallway.
+
+D
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+  There is a long piece of rope lying on the floor.
+
+  There is a rusty acetylene torch here.
+
+  There are matches from the Vampire Diner here.
+
+  There is a heavy steel grappling hook here.
+
+  There is a fine cuban cigar here.
+
+INVENTORY
+
+  You are carrying the following 5 objects:
+     Kerosene
+     Bloody hatchet
+     Skeleton key
+     Bullet in gun
+     Brass lantern
+
+TAKE ALL
+
+  OK
+
+INVENTORY
+
+  You are carrying the following 10 objects:
+     Kerosene
+     Bloody hatchet
+     Skeleton key
+     Coil of rope
+     Acetylene torch
+     Reusable match
+     Grappling Hook
+     Bullet in gun
+     Brass lantern
+     Cuban cigar
+
+TIE ROPE
+
+  The rope is tied securely to the grappling hook.
+
+U
+
+  You're in the upstairs hallway.
+
+W
+
+  You're in the boudoir.
+
+POOF
+
+  It is now pitch dark.  If you procede you may stumble and fall.
+
+LIGHT LAMP
+
+  You are in the empty room.
+
+S
+
+  You're in glowing rock room.
+
+W
+
+  You are in the fire room.
+
+W
+
+  This is the blue room.
+
+N
+
+  You're in a long and winding maze of passages.
+
+NE
+
+  You're in a short and winding maze of passages.
+
+W
+
+  You're in a maze of short and winding passages.
+
+D
+
+  This is the glacier room.  The walls are covered with
+  dazzling shapes of ice which reflect the light from your
+  lamp in a million colors.  In the far side of the room
+  are magnificent ice sculptures of animals unknown to
+  Mankind.  A faint "X" is scratched in the ice on one wall.
+  Icy passages exit SW and east.  A steep trail goes up.
+
+LIGHT MATCH
+
+  The light is burning dimly.
+
+LIGHT TORCH
+
+  The torch is burning noisily.
+
+EXTINGUISH MATCH
+
+  The light is out.
+
+MELT GLACIER
+
+  Some ice has melted, leaving a large hole.
+
+  You are standing in a small puddle of water.
+
+EXTINGUISH TORCH
+
+  OK
+
+DROP TORCH
+
+  OK
+
+N
+
+  You are in a long, bending tunnel.  With your lamp
+  you can barely make out exits to the south and east.
+
+E
+
+  You are in an extremely cold chamber embedded deep
+  within the glacier.  Stalactites of ice hang from
+  the ceiling far above you.  An ominous tunnel leaves
+  to the west.
+
+  A delicate crystal swan lies off to one side!
+
+TAKE SWAN
+
+  OK
+
+W
+
+  You are in a cold, bending tunnel.
+
+S
+
+  You are in the glacier room.
+
+  Some ice has melted, leaving a large hole.
+
+  There is a rusty acetylene torch here.
+
+  You are standing in a small puddle of water.
+
+U
+
+  You are at the east end of a long, damp earthen tunnel.  Above
+  you dangle rows of tomato plant roots arranged neatly in rows.
+  A steep but climbable trail plummets down.
+
+W
+
+  You are at the west end of a long, damp earthen tunnel.  Water
+  drips down from the roof and seeps into the muddy floor.  The
+  tunnel continues east, and a drier passage leads west.
+
+W
+
+  You are in the remains of an old wine cellar, apparently the
+  victim of a cave in.  Casks of once fine wine lie crushed in
+  the rubble.  A battered keg of GENESEE sits off in the corner.
+  The room smells like a Rathskellar band party.  A muddy path
+  goes east, and steps lead up to a door in the ceiling.
+
+UNLOCK DOOR
+
+  OK
+
+OPEN DOOR
+
+  OK
+
+U
+
+  You are on the far side of the moat.  You can see
+  a full view of the castle here in all its deadly
+  splendor.  A small town can be glimpsed far off in
+  the distance.  An old sign nailed to a tree reads:
+       "YOU CAN'T REACH THE VILLAGE FROM HERE!"
+
+  There is a large opening in the ground.
+
+D
+
+  You are in the wine cellar.
+
+E
+
+  You're at west end of a damp, earthen tunnel.
+
+E
+
+  You're at east end of a damp, earthen tunnel.
+
+D
+
+  You are in the glacier room.
+
+  Some ice has melted, leaving a large hole.
+
+  There is a rusty acetylene torch here.
+
+  You are standing in a small puddle of water.
+
+SW
+
+  You are in a room full of old and decaying skeletons.  The
+  rotting forms of many werewolves can be identified among
+  the bodies.  Along the near wall is a desk with a crystal
+  ball and a nameplaque that says "OLD GYPSY WOMAN".  The
+  gypsy is nowhere to be seen.  A path leads east and a small
+  tunnel goes south.
+
+S
+
+  You are in a small room which is the junction of four small
+  tunnels.  The tunnels lead north, south, east and (you
+  guessed it) west.
+
+W
+
+  You are in a room whose walls are covered with graffiti.
+  The messages range from "FRODO LIVES" to filthy remarks
+  concerning the parental lineage of werewolves.  A rocky
+  path goes south.  A low tunnel leads east.
+
+  A sapphire sparkles on the ground nearby!
+
+S
+
+  You are in the south end of a large cavern.  The
+  cavern wall before you rises vertically, ending at a
+  ledge well out of your reach.  The cavern continues
+  north and out of sight.  A tiny trail heads east.
+
+THROW HOOK
+
+  A rope is hooked to the top of the precipice.
+
+E
+
+  You are in the graffiti room.
+
+  A sapphire sparkles on the ground nearby!
+
+TAKE SAPPHIRE
+
+  OK
+
+S
+
+  You are at the south end of a large cavern.
+
+  A rope is hooked to the top of the precipice.
+
+U
+
+  You are at the edge of a sheer vertical drop overlooking
+  an immense N/S cavern.  Narrow paths head away to the
+  east and west.
+
+  A rope is hooked to the top of the precipice.
+
+W
+
+  You are in a tall tunnel leading east and west.  A small
+  trail goes SE.  An immense wooden door heads south.
+
+  There is a fairly large cyclops staring at you.
+
+THROW CIGAR
+
+  The cyclops turns to you and says:
+     "Hey buddy!.  Got a light??"
+
+LIGHT MATCH
+
+  The light is burning dimly.
+
+LIGHT CIGAR
+
+  The cyclops chokes from the rancid tobacco, and
+  crashes through the door in search of water.
+
+  There is a cyclops-shaped hole in the door.
+
+EXTINGUISH MATCH
+
+  The light is out.
+
+S
+
+  You are in the lair of the cyclops.  The broken bones of
+  previous explorers are strewn about the room.  One huge
+  contact lens lies on a high table.  The cyclops seems
+  to be gone.  A splintered door exits north.
+
+  There is an ivory-handled sword here!
+
+TAKE SWORD
+
+  OK
+
+N
+
+  You're in the center of a tall tunnel.
+
+  There is a cyclops-shaped hole in the door.
+
+W
+
+  You are in a tremendous cavern divided by a white line
+  through its center.  The north side of the cavern is
+  green and fresh, a startling change from the callous
+  terrain of the cave.  A sign at the border proclaims
+  this to be the edge of the wizard's realm.  A rocky
+  and forlorn trail leads east, and a plush green path
+  wanders north.
+
+  Your sword is glowing dimly.
+
+N
+
+  You are in an immense forest of tall trees.  Melodic
+  chanting can be heard in the distance.  The trees seem
+  to be guiding you along a N/S path.
+
+  Your sword is glowing very brightly.
+
+N
+
+  This is the wizard's throne room.  Scattered about
+  the room are various magical items.  A long message
+  in ancient runes is carved into the southern wall.  It
+  translates roughly as "Beware the power of the Wizard,
+  for he is master of this place".  Two green paths go
+  south and east, and a marble walk leads west.
+
+  A powerful wizard blocks your way with his staff.
+
+  Your sword is brilliantly lit.
+
+WAVE SWORD
+
+  The walls of the cavern tremble as you unleash the
+  terrible power contained in the sword.
+
+  The wizard, sensing a stronger power than his own,
+  flees in a blinding flash and a cloud of smoke.
+
+W
+
+  You are in the wizard's cache, a large room whose walls
+  are inlaid with jewels.  A majestic marble walk leads to
+  the east.
+
+  There is lots of money here!
+
+TAKE MONEY
+
+  OK
+
+E
+
+  You are in the throne room.
+
+E
+
+  You're at the border.
+
+E
+
+  You're in the center of a tall tunnel.
+
+  There is a cyclops-shaped hole in the door.
+
+SE
+
+  You have entered the land of the living dead, a
+  large, desolate room.  Although it is apparently
+  uninhabited, you can hear the awful sounds of
+  thousands of lost souls weeping and moaning.
+  In the east corner are stacked the remains of
+  dozens of previous adventurers who were less
+  fortunate than yourself.  To the north is a
+  foreboding passage.  A path goes west.
+
+N
+
+  This is the disco room.  Multicolored lasers pulsate
+  wildly to the beat of badly mixed music.  A stairway
+  down is barely visible through the glare.  A large
+  passage exits south, and a smaller one leads west.
+
+D
+
+  You're in a maze of winding, long passages.
+
+S
+
+  You're in a maze of short and winding passages.
+
+SW
+
+  This is the blue room.
+
+E
+
+  You are in the fire room.
+
+NE
+
+  You're in glowing rock room.
+
+S
+
+  This is the lobby.
+
+E
+
+  You're in elevator on top floor.
+
+D
+
+  You're in elevator on bottom floor.
+
+W
+
+  You are in the treasure vault.
+
+  There is a bottle of vintage champagne here!
+
+  A gold statue is glistening in the light!
+
+  There is a silver cross nearby!
+
+  Perched on the ground is a valuable jade figure!
+
+DROP SWORD
+
+  OK
+
+DROP SAPPHIRE
+
+  OK
+
+DROP MONEY
+
+  OK
+
+DROP SWAN
+
+  OK
+
+DROP KEY
+
+  OK
+
+E
+
+  You're in elevator on bottom floor.
+
+U
+
+  You're in elevator on top floor.
+
+W
+
+  Your lamp is getting dim.  Perhaps you should look for more fuel.
+
+  I took the liberty of filling the lamp with kerosene.
+
+  This is the lobby.
+
+N
+
+  You're in glowing rock room.
+
+N
+
+  You are in the empty room.
+
+POOF
+
+  You are in a small boudoir.  The pink walls reflect the
+  soft lighting with a warm glow.  The door exits east.
+
+EXTINGUISH LAMP
+
+  The light is out.
+
+E
+
+  You're in the upstairs hallway.
+
+D
+
+  You're in foyer.
+
+  The butler is sleeping once again.
+
+W
+
+  You are in the garden.
+
+W
+
+  You are at the side of the dirt road.
+
+N
+
+  You are at the side of the moat.
+
+  Off to the side is an old rowboat.
+
+TAKE BOAT
+
+  OK
+
+CROSS
+
+  You're on the far side of the moat
+
+  There is a large opening in the ground.
+
+D
+
+  It is now pitch dark.  If you procede you may stumble and fall.
+
+LIGHT LAMP
+
+  You are in the wine cellar.
+
+E
+
+  You're at west end of a damp, earthen tunnel.
+
+E
+
+  You're at east end of a damp, earthen tunnel.
+
+D
+
+  You are in the glacier room.
+
+  Some ice has melted, leaving a large hole.
+
+  There is a rusty acetylene torch here.
+
+  You are standing in a small puddle of water.
+
+E
+
+  You're in a short and winding maze of passages.
+
+N
+
+  You're in a maze of short and winding passages.
+
+SW
+
+  This is the blue room.
+
+S
+
+  You are in narrow E/W passage.
+
+S
+
+  You are in the long damp tunnel.
+
+E
+
+  You are at the base of the waterfall.
+
+  An empty bottle is discarded nearby.
+
+TAKE BOTTLE
+
+  OK
+
+CROSS
+
+  You are on a small island near a large waterfall.  The sound of
+  crashing surf can be clearly heard, although you cannot quite
+  make out the form of the waterfall through the thick mist.  A
+  message traced out in the sand reads "GILLIGAN WAS HERE".  There
+  are pieces of a wreck (the S.S. MINNOW?) scattered about.
+
+  There is a very large ruby here!
+
+DROP BOTTLE
+
+  OK
+
+TAKE RUBY
+
+  OK
+
+CROSS
+
+  You are at the base of the waterfall.
+
+DROP BOAT
+
+  OK
+
+W
+
+  You are in the long damp tunnel.
+
+N
+
+  You are in narrow E/W passage.
+
+E
+
+  This is the blue room.
+
+E
+
+  You are in the fire room.
+
+NE
+
+  You're in glowing rock room.
+
+S
+
+  This is the lobby.
+
+E
+
+  You're in elevator on top floor.
+
+D
+
+  You're in elevator on bottom floor.
+
+W
+
+  You are in the treasure vault.
+
+  There is an ornate skeleton key here!
+
+  There is a bottle of vintage champagne here!
+
+  There is an ivory-handled sword here!
+
+  A gold statue is glistening in the light!
+
+  There is a silver cross nearby!
+
+  Perched on the ground is a valuable jade figure!
+
+  A sapphire sparkles on the ground nearby!
+
+  There is lots of money here!
+
+  A delicate crystal swan lies off to one side!
+
+DROP RUBY
+
+  OK
+
+E
+
+  You're in elevator on bottom floor.
+
+U
+
+  The elevator has screeched to a halt between two floors.
+
+  Your axe is trembling slightly.
+
+BREAK DOOR
+
+  There is a passable hole in the door.
+
+N
+
+  You are in a room of mammoth proportions which seems
+  to be some sort of warehouse.  On a nearby table are
+  several clipboards and a massive pile of order forms.
+  To your right is a large loading dock and a truck bay.
+  The room opens to the north, east and west.
+
+  Your axe is trembling slightly.
+
+WAVE AXE
+
+  The letter "H" appears for an instant on the wall.
+
+W
+
+  You are in the western end of the Castlequest warehouse.
+  To one side sits an empty kerosene drum.  Scattered
+  all over the floor are shreds of foam rubber used to
+  pack delicate crystal swans for shipping.  The empty
+  tins of countless T.V. dinners are discarded around
+  a full garbage can.
+
+  Your axe is trembling slightly.
+
+WAVE AXE
+
+  A mystical voice says "OH".
+
+E
+
+  You are in the main room of the warehouse.
+
+  Your axe is trembling slightly.
+
+N
+
+  You are in the north end of the Castlequest warehouse.
+  There is a large box of BIC CLICs to your left, all
+  empty (they don't write "first time, every time").
+  On a shelf to your right is a huge supply of Burpee
+  tomato plant seeds.
+
+  Your axe is trembling slightly.
+
+WAVE AXE
+
+  The letter "N" forms out of mist.
+
+S
+
+  You are in the main room of the warehouse.
+
+  Your axe is trembling slightly.
+
+E
+
+  You are in the eastern end of the Castlequest warehouse.
+  In a box near the corner are the empty cartridges from
+  many silver bullets.  Through a small window you can spy
+  the Vampire Diner (talk about greasy spoons).
+
+  Your axe is trembling slightly.
+
+WAVE AXE
+
+  A large "K" emerges from the floor.
+
+W
+
+  You are in the main room of the warehouse.
+
+  Your axe is trembling slightly.
+
+S
+
+  You are in the elevator, stuck between floors.
+
+  There is a passable hole in the door.
+
+  Your axe is trembling slightly.
+
+SCORE
+
+  You made 314 moves, and scored 295 points.
+
+HONK
+
+  You feel the elevator jump as you are whisked up towards
+  ground level.  You emerge in the open air in the village
+  square amidst cheers from the local villagers.  Banners
+  proclaiming the death of count Vladimir hang from most
+  of the old buildings around the square.  The mayor
+  presents you with a key to the city and makes your
+  birthday a holiday.  You watch the sun rise as you
+  bask in your newfound fame.
+
+  You scored 300 out of 300 points.
+
+  This qualifies you as a "CLASS A" MASTER!
+
