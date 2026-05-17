@@ -6,6 +6,8 @@ message.1083
 	\n  Your lamp is getting dim.  Perhaps you should look for more fuel.
 message.hint.14
 	\n  Try opening the book by Shakespeare.
+message.hint.31
+	\n  The object of the game is to find the master of the castle\n  and kill him, while accumulating as many treasures as possible.\n  You get maximum points for depositing the treasures in the\n  vault.  Notice that the descriptions of treasures have an\n  exclamation point.  Be wary, as many dangers await you in\n  the castle.
 message.hint.33
 	\n  To aid you in your travels, you may ask for a hint by\n  saying "HELP object", where "object" is the item that you\n  need help with (e.g. "HELP CROSS").  Saying "HELP ROOM"\n  will give you some help concerning the room you're in.
 message.hint.1003
